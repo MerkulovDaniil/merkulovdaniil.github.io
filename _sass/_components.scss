@@ -361,7 +361,6 @@
   height: 20em;
 
   color: $color-white;
-  background-color: $color-black;
 
   @media (min-width: $mq-sm) {
     height: 35em;
@@ -851,6 +850,10 @@ div[class^="front_button"] {
   background-color: white;
   margin-right: 5px;
   padding: 3px;
+
+  a{
+     border-bottom: none;
+  }
 
   &:hover,
   &:active,

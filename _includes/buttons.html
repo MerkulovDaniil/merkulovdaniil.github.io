@@ -4,25 +4,37 @@ Usage: {% include buttons.html repo=page.repo bibtex = page.bibtex pdf = page.pd
 {% if include.bibtex %}
 {%  assign bibtexcounter   = bibtexcounter    | plus:1 %}
 {% endif %}
+{% if include.doi %}
+{%  assign doicounter   = doicounter    | plus:1 %}
+{% endif %}
 
 <!-- {% if include.inline %}{% else %}<button type="button" name="button" class="btn"><a href="https://github.com/MerkulovDaniil/optim/edit/master/{{page.path}}">Edit this page</a></button>{% endif %} -->
 
-{%- if include.repo -%} <div class="front_button"><a href="{{include.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></div>{%- endif -%}
-
-{%- if include.bibtex -%} <button type="button" class="front_button" name="@bibtex{{ bibtexcounter }}"  onclick="myFunction({{ bibtexcounter }})"><i class="fas fa-quote-right"></i> Cite </button>{% endif %}
-
-<!-- {%- if include.bibtex -%}<div class="front_button" name="@bibtex{{ bibtexcounter }}" onclick="myFunction({{ bibtexcounter }})"><a href="{{include.bibtex}}" target="_blank"><i class="fas fa-quote-right"></i> Cite </a></div>{%- endif -%} -->
-{%- if include.pdf -%}<div class="front_button"><a href="{{include.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></div>{%- endif -%}
-{%- if include.arxiv -%}<div class="front_button"><a href="{{include.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></div>{%- endif -%}
-{%- if include.video -%}<div class="front_button"><a href="{{include.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></div>{%- endif -%}<br>
+{%- if include.repo -%} <button type="button" class="front_button"><a href="{{include.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></button>{%- endif -%}
+{%- if include.bibtex -%} <button type="button" class="front_button" name="@bibtex{{ bibtexcounter }}"  onclick="myFunction1({{ bibtexcounter }})"><i class="fas fa-quote-right"></i> Cite </button>{% endif %}
+{%- if include.doi -%} <button type="button" class="front_button" name="@doi{{ doicounter }}"  onclick="myFunction2({{ doicounter }})"><i class="ai ai-doi"></i> doi </button>{% endif %}
+{%- if include.pdf -%}<button type="button" class="front_button"><a href="{{include.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></button>{%- endif -%}
+{%- if include.arxiv -%}<button type="button" class="front_button"><a href="{{include.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></button>{%- endif -%}
+{%- if include.video -%}<button type="button" class="front_button"><a href="{{include.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></button>{%- endif -%}<br>
 
 
 {% if include.file %}<button type="button" name="Files{{ filescounter }}" class="btn" onclick="myFunction2({{ filescounter }})">Files</button>{% endif %}
 {% if include.tabname %}<button type="button" name="{{include.tabname}}{{ othertabscounter }}" class="btn" onclick="myFunction3({{ othertabscounter }})">{{include.tabname}}</button>{% endif %}
 
 <script>
-function myFunction(id) {
+function myFunction1(id) {
   var x = document.getElementById("@bibtex"+String(id));
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function myFunction2(id) {
+  var x = document.getElementById("@doi"+String(id));
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -35,6 +47,14 @@ function myFunction(id) {
   <div class="code-example" style="background-color: #f5f6fa">
     <code style="border: none">
 {{include.bibtex | newline_to_br}}
+    </code>
+  </div>
+</div>
+
+<div id="@doi{{ doicounter }}" style="display: none">
+  <div class="code-example" style="background-color: #f5f6fa">
+    <code style="border: none">
+{{include.doi | newline_to_br}}
     </code>
   </div>
 </div>
