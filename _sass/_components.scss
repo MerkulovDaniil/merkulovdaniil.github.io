@@ -844,6 +844,22 @@ div[class^="front_button"] {
   }
   }
 
+.front_button {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid $color-black;
+  background-color: white;
+  margin-right: 5px;
+  padding: 3px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    color: $color-alpha;
+  }
+}
+
 
 
 .box{

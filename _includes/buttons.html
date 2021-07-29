@@ -1,0 +1,42 @@
+{% comment %} 
+Usage: {% include buttons.html repo=page.repo bibtex = page.bibtex pdf = page.pdf arxiv = page.arxiv video = page.video doi = page.doi inline = False%}
+{% endcomment %}
+{% if include.bibtex %}
+{%  assign bibtexcounter   = bibtexcounter    | plus:1 %}
+{% endif %}
+
+<!-- {% if include.inline %}{% else %}<button type="button" name="button" class="btn"><a href="https://github.com/MerkulovDaniil/optim/edit/master/{{page.path}}">Edit this page</a></button>{% endif %} -->
+
+{%- if include.repo -%} <div class="front_button"><a href="{{include.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></div>{%- endif -%}
+
+{%- if include.bibtex -%} <button type="button" class="front_button" name="@bibtex{{ bibtexcounter }}"  onclick="myFunction({{ bibtexcounter }})"><i class="fas fa-quote-right"></i> Cite </button>{% endif %}
+
+<!-- {%- if include.bibtex -%}<div class="front_button" name="@bibtex{{ bibtexcounter }}" onclick="myFunction({{ bibtexcounter }})"><a href="{{include.bibtex}}" target="_blank"><i class="fas fa-quote-right"></i> Cite </a></div>{%- endif -%} -->
+{%- if include.pdf -%}<div class="front_button"><a href="{{include.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></div>{%- endif -%}
+{%- if include.arxiv -%}<div class="front_button"><a href="{{include.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></div>{%- endif -%}
+{%- if include.video -%}<div class="front_button"><a href="{{include.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></div>{%- endif -%}<br>
+
+
+{% if include.file %}<button type="button" name="Files{{ filescounter }}" class="btn" onclick="myFunction2({{ filescounter }})">Files</button>{% endif %}
+{% if include.tabname %}<button type="button" name="{{include.tabname}}{{ othertabscounter }}" class="btn" onclick="myFunction3({{ othertabscounter }})">{{include.tabname}}</button>{% endif %}
+
+<script>
+function myFunction(id) {
+  var x = document.getElementById("@bibtex"+String(id));
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div id="@bibtex{{ bibtexcounter }}" style="display: none">
+  <div class="code-example" style="background-color: #f5f6fa">
+    <code style="border: none">
+{{include.bibtex | newline_to_br}}
+    </code>
+  </div>
+</div>
+
+{% if include.inline %}{% else %}{% endif %}
