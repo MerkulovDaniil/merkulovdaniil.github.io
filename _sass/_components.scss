@@ -611,9 +611,7 @@
  * On the Post page for single post pagination
  */
 .next {
-  background-color: $color-black;
-
-  &__link {
+    &__link {
     display: block;
     height: 25em;
     padding: 6em 0;
