@@ -214,14 +214,7 @@ layout: default
           {{ talk.place }}
         </div>
         <div class="cell" data-title="Materials" style="min-width: 100px;">
-          {%- if talk.repo -%} <div class="front_button"><a href="{{talk.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></div>{%- endif -%}
-          {%- if talk.bibtex -%}<div class="front_button"><a href="{{talk.bibtex}}" target="_blank"><i class="fas fa-quote-right"></i> Cite </a></div>{%- endif -%}
-          {%- if talk.pdf -%}<div class="front_button"><a href="{{talk.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></div>{%- endif -%}
-          {%- if talk.arxiv -%}<div class="front_button"><a href="{{talk.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></div>{%- endif -%}
-          {%- if talk.video -%}<div class="front_button"><a href="{{talk.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></div>{%- endif -%}
-          {%- if talk.slides -%}<div class="front_button"><a href="{{talk.slides}}" target="_blank"><i class="far fa-file-alt"></i> slides </a></div>{%- endif -%}
-          {%- if talk.file -%}<div class="front_button"><a href="{{talk.file}}" target="_blank"><i class="far fa-file-alt"></i> file </a></div>{%- endif -%}
-          {%- if talk.code -%}<div class="front_button"><a href="{{talk.code}}" target="_blank"><i class="fas fa-terminal"></i> code </a></div>{%- endif -%}
+          {% include buttons.html repo=talk.repo bibtex = talk.bibtex pdf = talk.pdf arxiv = talk.arxiv video = talk.video doi = talk.doi slides = talk.slides file = talk.file code = talk.code %}
         </div>
       </div>    
     {% endfor %}
