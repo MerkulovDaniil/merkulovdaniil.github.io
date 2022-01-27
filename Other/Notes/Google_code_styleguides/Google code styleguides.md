@@ -3,8 +3,6 @@ title: Google code styleguides
 cover: None
 icon: None
 emoji: 💈
-Created: 23 Jan, 2022
-Tags: 
 Name: 
 ---
 
