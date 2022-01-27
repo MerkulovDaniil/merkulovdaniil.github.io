@@ -1,6 +1,6 @@
 ---
 title: PhD. Look before the Adventure
-cover: https://merkulov.top/Other/Posts/PhD._Look_before_the_Adventure/card.png
+cover: https://merkulov.top/Other/Posts/PhD._Look_before_the_Adventure/card_phd.jpeg
 icon: None
 emoji: None
 Name: 
