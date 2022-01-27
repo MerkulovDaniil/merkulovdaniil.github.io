@@ -1,0 +1,231 @@
+---
+layout: default
+---
+
+<div id="home">
+<div class="cat_title" style="z-index: 40;">
+	<h1> Teaching </h1>
+</div>
+
+<section class="section-padding" itemprop="articleBody">
+    <div class="post">
+      <h3>🎢 Optimization methods</h3>
+    <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Name
+      </div>
+      <div class="cell">
+        Date
+      </div>
+      <div class="cell">
+        Role
+      </div>
+      <div class="cell">
+        Place
+      </div>
+      <div class="cell">
+        Materials
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Методы оптимизации
+      </div>
+      <div class="cell" data-title="Date">
+        2017 - 2018
+      </div>
+      <div class="cell" data-title="Role">
+        Assistant lecturer
+      </div>
+      <div class="cell" data-title="Place">
+        МФТИ
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://github.com/MerkulovDaniil/mipt_optimization" target="_blank"><i class="fab fa-github"></i> repo </a></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Методы оптимизации
+      </div>
+      <div class="cell" data-title="Date">
+        2018 - 2019
+      </div>
+      <div class="cell" data-title="Role">
+        Assistant lecturer
+      </div>
+      <div class="cell" data-title="Place">
+        МФТИ
+      </div>
+      <div class="cell" data-title="Materials">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Методы оптимизации
+      </div>
+      <div class="cell" data-title="Date">
+        2019 - 2020
+      </div>
+      <div class="cell" data-title="Role">
+        Assistant lecturer
+      </div>
+      <div class="cell" data-title="Place">
+        МФТИ
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://fmin.xyz" target="_blank"><i class="fas fa-globe"></i> site </a></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Методы оптимизации
+      </div>
+      <div class="cell" data-title="Date">
+        2020 - 2021
+      </div>
+      <div class="cell" data-title="Role">
+        Senior lecturer
+      </div>
+      <div class="cell" data-title="Place">
+        МФТИ
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://fmin.xyz" target="_blank"><i class="fas fa-globe"></i> site </a></div>
+      </div>
+    </div>
+    
+  </div>
+
+  <h3>🧠 Numerical Linear Algebra</h3>
+    <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Name
+      </div>
+      <div class="cell">
+        Date
+      </div>
+      <div class="cell">
+        Role
+      </div>
+      <div class="cell">
+        Place
+      </div>
+      <div class="cell">
+        Materials
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        NLA
+      </div>
+      <div class="cell" data-title="Date">
+        2017
+      </div>
+      <div class="cell" data-title="Role">
+        TA
+      </div>
+      <div class="cell" data-title="Place">
+        Skoltech
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://github.com/oseledets/nla2017" target="_blank"><i class="fab fa-github"></i> repo </a></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        NLA
+      </div>
+      <div class="cell" data-title="Date">
+        2018
+      </div>
+      <div class="cell" data-title="Role">
+        TA
+      </div>
+      <div class="cell" data-title="Place">
+        Skoltech
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://nla.skoltech.ru/old/2018/index.html" target="_blank"><i class="fas fa-globe"></i> site </a></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        NLA
+      </div>
+      <div class="cell" data-title="Date">
+        2019
+      </div>
+      <div class="cell" data-title="Role">
+        TA
+      </div>
+      <div class="cell" data-title="Place">
+        Skoltech
+      </div>
+      <div class="cell" data-title="Materials">
+        <div class="front_button"><a href="https://nla.skoltech.ru/" target="_blank"><i class="fas fa-globe"></i> site </a></div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+
+  <h3>🗣 Talks</h3>
+    <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Title
+      </div>
+      <div class="cell">
+        Date
+      </div>
+      <div class="cell">
+        Place
+      </div>
+      <div class="cell">
+        Materials
+      </div>
+    </div>
+
+    {% assign sorted_talks = site.data.talks | sort: 'date' %}
+    {% for talk in sorted_talks %}
+      <div class="row">
+        <div class="cell" data-title="Title">
+          {{ talk.title }}
+        </div>
+        <div class="cell" data-title="Date">
+          {{ talk.date }}
+        </div>
+        <div class="cell" data-title="Place">
+          {{ talk.place }}
+        </div>
+        <div class="cell" data-title="Materials" style="min-width: 100px;">
+          {% include buttons.html repo=talk.repo bibtex = talk.bibtex pdf = talk.pdf arxiv = talk.arxiv video = talk.video doi = talk.doi slides = talk.slides file = talk.file code = talk.code %}
+        </div>
+      </div>    
+    {% endfor %}
+  </div>
+
+
+
+  
+
+ </div>
+  </section>
+
+{% include archive-link.html %}
+</div>

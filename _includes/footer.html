@@ -1,0 +1,28 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="{{ '/assets/js/app.js' | prepend: site.baseurl }}"></script>
+{% if page.exclude_toc %}
+{% else %}
+<script>
+    tocbot.init({
+        tocSelector: '.toc',
+        contentSelector: '.post',
+        hasInnerContainers: true,
+        headingSelector: 'h1, h2, h3, h4'
+    });
+</script>
+
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  var hide_length = 500
+  if ((document.body.scrollTop < hide_length && document.documentElement.scrollTop < hide_length) || window.innerHeight + window.scrollY > document.body.clientHeight - hide_length || screen.width < 1024) {
+    document.getElementById("toc").style.display = "none";
+}
+  else {
+    document.getElementById("toc").style.display = "block";
+  }
+}
+</script>
+{% endif %}

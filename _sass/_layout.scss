@@ -1,0 +1,33 @@
+/**
+ * Body
+ */
+body {
+  background-color: $color-grey;
+}
+
+/**
+ * Sections
+ */
+section {
+  position: relative;
+}
+
+.section-padding {
+  padding: 0.5em 0;
+
+  &--lg {
+    padding: 6em 0;
+  }
+
+  &--sm {
+    padding: 2em 0;
+  }
+}
+
+/**
+ * Class Container (BEM)
+ */
+[class*='__container'] {
+  position: relative;
+  z-index: 1;
+}

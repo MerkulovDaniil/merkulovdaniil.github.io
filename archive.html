@@ -1,0 +1,26 @@
+---
+layout: default
+title: Архив
+description: 
+permalink: /archive/
+---
+{% assign postsByYear =
+    site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+{% for year in postsByYear %}
+  <div style="text-align: center;"><h1>{{ year.name }}</h1> </div>
+    <div class="section-padding archives__container">
+      {% for post in year.items %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="box">
+            <div class="cover">
+              <img src="{{post.image}}">
+            </div>
+            <div class="desc" style="padding: 10px">
+              <h4>{{post.title | truncatewords: 5}}</h4><p>{% include rus_date.html date=post.date %} in {{post.categories[0]}}<p>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+{% endfor %}

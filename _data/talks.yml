@@ -1,0 +1,69 @@
+- title: Linear Algebra in Data Science
+  date: 2021/06/15
+  place: Zhestkov University
+  code: https://colab.research.google.com/github/MerkulovDaniil/optim/blob/master/assets/Notebooks/LA_in_DS.ipynb
+  pdf: /files/LA_in_DS_Zhestkov.pdf
+
+- title: Нейронные сети для ЭР-телеком
+  date: 2021/03/25
+  slides: https://docs.google.com/presentation/d/1EWCQEzDuJbyDoIfhy4NelM9hcO2mbWXJZkNPtd_5d9w/edit#slide=id.p
+  place: Сберуниверситет
+  code: https://colab.research.google.com/drive/1tEjiv1gXTvboFgPpka_b2iqAghpKnKDm
+
+- title: Нейронные сети для зам.министров Татарстана
+  date: 2021/04/21
+  slides: https://docs.google.com/presentation/d/1MrzFyisfmVXAAu8pkGSh1jdneFTOsul0UdYjrj0qACs/
+  code: https://colab.research.google.com/drive/1tEjiv1gXTvboFgPpka_b2iqAghpKnKDm
+  place: Сберуниверситет
+
+- title: Нейронные сети и компьютерное зрение для руководителей
+  date: 2021/05/18
+  slides: https://docs.google.com/presentation/u/2/d/1MjVfYECs4GapJF3TI3nP1lI1xEiDcAZ1Foacb9OFM9s
+  place: Сберуниверситет
+
+- title: Generative Adversarial Networks для руководителей
+  date: 2021/05/18
+  slides: https://docs.google.com/presentation/d/1qMWUtlo0CKVPc5G618njadPSma1diJF2GvPczuNr9wQ/
+  place: Сберуниверситет
+
+- title: Генеративные сети для ЭР-телеком
+  date: 2021/06/04
+  slides: https://docs.google.com/presentation/d/1aRvjo99s6b51q1Bncfn4gybM3rjWj46qah0fFA1saZY/
+  code: https://colab.research.google.com/drive/1RhayEN929uNSKQ5rJlDoKJhkCpZ92F5M?usp=sharing
+  place: Сберуниверситет
+
+- title: $\LaTeX$ для начинающих
+  date: 2016/04/06
+  video: https://youtu.be/hSc0H143ddw
+  file: https://mega.nz/#F!fR1WzBLT!euna1alsDO1npA0Cjt_Tnw
+  place: МФТИ
+
+- title: Mirror Descent from theory to practice
+  slides: /files/Mirror Descent from theory to practice.pdf
+  place: Skoltech
+  date: 2019/04/03
+
+- title: Mirror Descent algorithm in stochastic online optimization with noisy first order oracle
+  slides: files/ISMP_Merkulov.pdf
+  place: ISMP 2015
+  date: 2015/07/15
+
+- title: Stochastic gradient algorithms from ODE splitting perspective
+  video: https://youtu.be/wKQNXreTDTE
+  place: ICLR 2020
+  date: 2020/04/27
+
+- title: Что такое нейросети и как они работают?
+  video: https://youtu.be/CvR4nRGSnh0
+  place: Сбербанк
+  date: 2021/02/01
+
+- title: Инструменты научных вычислений. $\LaTeX$
+  video: https://youtu.be/Qn21gRmdsps
+  place: Кавказский математический центр
+  date: 2018/04/17
+
+- title: Инструменты научных вычислений. Python
+  video: https://youtu.be/y50ag5YJoC4
+  place: Кавказский математический центр
+  date: 2018/04/18

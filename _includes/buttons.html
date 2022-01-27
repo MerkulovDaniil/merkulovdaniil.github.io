@@ -1,0 +1,59 @@
+{% comment %} 
+Usage: {% include buttons.html repo=talk.repo bibtex = talk.bibtex pdf = talk.pdf arxiv = talk.arxiv video = talk.video doi = talk.doi slides = talk.slides file = talk.file code = talk.code inline = False%}
+{% endcomment %}
+{% if include.bibtex %}
+{%  assign bibtexcounter   = bibtexcounter    | plus:1 %}
+{% endif %}
+{% if include.doi %}
+{%  assign doicounter   = doicounter    | plus:1 %}
+{% endif %}
+
+{%- if include.repo -%} <button type="button" class="front_button"><a href="{{include.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></button>{%- endif -%}
+{%- if include.bibtex -%} <button type="button" class="front_button" name="@bibtex{{ bibtexcounter }}"  onclick="myFunction1({{ bibtexcounter }})"><i class="fas fa-quote-right"></i> Cite </button>{% endif %}
+{%- if include.doi -%} <button type="button" class="front_button" name="@doi{{ doicounter }}"  onclick="myFunction2({{ doicounter }})"><i class="ai ai-doi"></i> doi </button>{% endif %}
+{%- if include.pdf -%}<button type="button" class="front_button"><a href="{{include.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></button>{%- endif -%}
+{%- if include.arxiv -%}<button type="button" class="front_button"><a href="{{include.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></button>{%- endif -%}
+{%- if include.video -%}<button type="button" class="front_button"><a href="{{include.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></button>{%- endif -%}
+{%- if include.slides -%}<button type="button" class="front_button"><a href="{{include.slides}}" target="_blank"><i class="far fa-file-alt"></i> slides </a></button>{%- endif -%}
+{%- if include.file -%}<button type="button" class="front_button"><a href="{{include.file}}" target="_blank"><i class="far fa-file-alt"></i> file </a></button>{%- endif -%}
+{%- if include.code -%}<button type="button" class="front_button"><a href="{{include.code}}" target="_blank"><i class="fas fa-terminal"></i> code </a></button>{%- endif -%}<br>
+
+<script>
+function myFunction1(id) {
+  var x = document.getElementById("@bibtex"+String(id));
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function myFunction2(id) {
+  var x = document.getElementById("@doi"+String(id));
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div id="@bibtex{{ bibtexcounter }}" style="display: none">
+  <div class="code-example" style="background-color: #f5f6fa">
+    <code style="border: none">
+{{include.bibtex | newline_to_br}}
+    </code>
+  </div>
+</div>
+
+<div id="@doi{{ doicounter }}" style="display: none">
+  <div class="code-example" style="background-color: #f5f6fa">
+    <code style="border: none">
+{{include.doi | newline_to_br}}
+    </code>
+  </div>
+</div>
+
+{% if include.inline %}{% else %}{% endif %}

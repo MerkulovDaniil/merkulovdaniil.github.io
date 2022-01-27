@@ -1,0 +1,66 @@
+# Site settings
+email: danya@merkulov.top
+baseurl: ""
+
+# SEO settings
+title: merkulov.top
+description: cozy and warm place
+url: "https://merkulov.top"
+default_img: "https://merkulov.top/images/posts/180217_scientifictools/card-sm.png"
+
+
+# Profile settings
+name: Bratishka
+profile_img: /images/profile.jpg
+profile: I am PhD student at Skolkovo Institute of Science and Technology 
+  and 
+  Senior Lecturer at Moscow Institute of Physics and Technology. I love <a href="/Papers"> math</a>, <a href="/Teaching"> teaching</a>, history, <a href="/Travel"> travelling</a> and <a href="/Other"> the ambiguity of being</a>. 
+social:
+  github: https://github.com/MerkulovDaniil/
+  vk: https://vk.com/merkulov_daniil
+  twitter: https://twitter.com/danya_merkulov
+  telegram: https://t.me/bratishk
+
+# Build settings
+exclude: [Gemfile", "Gemfile.lock", node_modules]
+# Markdown settings
+markdown: kramdown
+# !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
+# Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
+highlighter: rouge
+
+# More › http://kramdown.gettalong.org/quickref.html
+# Options › http://kramdown.gettalong.org/options.html
+kramdown:
+  input:          GFM
+  syntax_highlighter_opts:
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+permalink: /:year/:month/:day/:title/
+
+# Sass
+sass:
+  style: compressed
+
+# Gems
+plugins: [jekyll-sitemap, octopress-autoprefixer, jemoji]
+
+# Collections
+collections:
+  opt:
+    teaching: true
+    output: true
+    permalink: /:collection/:name
+    image: /files/opt.svg
+    title: Optimization Methods
+
+  nla:
+    teaching: true
+    output: true
+    permalink: /:collection/:name
+    image: /files/nla.gif
+    title: Numerical Linear Algebra

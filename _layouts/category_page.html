@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% assign cat_name = page.category %}
+<div id="home">
+<div class="cat_title">
+	<h1>{{ cat_name }}</h1>
+</div>
+<div class="section-padding archives__container">
+  	{% for post in site.categories[cat_name] %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="box">
+            <div class="cover">
+              <img src="{{post.image}}">
+            </div>
+            <div class="desc" style="padding: 10px">
+              <h4>{{post.title | truncatewords: 5}}</h4><p>{% include date.html date=post.date %}</p>
+            </div>
+          </div>
+        </a>
+	{% endfor %}
+</div>
+{% include archive-link.html %}
+</div>

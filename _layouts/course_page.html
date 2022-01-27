@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% assign collection_name = page.permalink | slice: 1, page.permalink.size %}
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast rellax" data-rellax-speed="-4" style="height: 100px;">
+    <figure class="absolute-bg mast__img" style="background-image: url('{{ page.image }}');"></figure>
+    <div class="mast__container">
+      <div class = "post_head_info"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include rus_date.html date=page.date %}</time>
+      <h1 itemprop="name headline">{{ page.title }}</h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-padding bg-grey" itemprop="articleBody">
+    <div class="post">
+      <!-- TABLE -->
+      <div style="overflow-x:auto;">
+      <table align="center">
+      <thead>
+      <tr>
+      <th></th>
+      <th> year </th>
+      <th> role </th>
+      <th> at </th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for instance in site.[collection_name] %}
+      {% unless instance.layout contains 'course_page'%}
+      <tr>
+      <td> <a href='{{ instance.url }}'> {{ instance.title }} </a> </td>
+      <td> {{ instance.year }} </td>
+      <td> {{ instance.role }} </td>
+      <td> {{ instance.place }} </td>
+      </tr>
+      {% endunless %}
+      {% endfor %}
+      </tbody>
+      </table>
+      </div>
+      <!-- ENDTAB -->
+
+     
+
+
+      {% include anchor_headings.html html=content %}
+    </div>
+  </section>
+</article>

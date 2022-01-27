@@ -1,0 +1,85 @@
+{% comment %} 
+AVOID SPACES IN PATHS
+Usage: {% include slideshow.html images='image_path1 image_path2 vid_RhANeATlFT0 ... image_pathn' captions='1#caption1 # 3#caption3 # 5#caption5' last_slider='False'%}
+{% endcomment %}
+{% if include.images %}
+{% assign slideshow_counter = slideshow_counter | plus:1 %}
+{% endif %}
+{% assign image_array   = include.images | split: ' ' %}
+{% assign num_of_images = image_array.size %}
+{% assign image_caps    = include.captions | split: ' # ' %}
+{% assign caption_nums  = blank %}
+{% assign caption_texts = blank %}
+{% assign videoIndicat  = 'vid_' %}
+{% for caption in image_caps %}
+  {% assign num_and_content = caption    | split: '#' %}
+  {% assign caption_nums  = caption_nums | append: num_and_content[0] | append: '###' %}
+  {% assign caption_texts = caption_texts | append: num_and_content[1] | append: '###' %}
+{% endfor %}
+{% assign caption_texts = caption_texts | split: '###' %}
+{% assign caption_nums  = caption_nums  | split: '###' %}
+<div class="slideshow-container">
+  {% assign captions_counter = 0 %}
+  {% for image in image_array %}
+  {% assign checkVideo = image | split:videoIndicat %}
+  <div class="mySlides{{ slideshow_counter }}">
+    {% if checkVideo[0] == blank %}
+      <div class="video">
+        <figure>
+            <iframe src="//www.youtube.com/embed/{{checkVideo[1]}}" frameborder="0" allowfullscreen></iframe>
+        </figure>
+      </div>
+    {% else %}
+      <img src="{{image}}" style="width:100%; max-height: 600px;object-fit: contain;">
+      {%- assign ind = forloop.index | strip-%}
+      {%- if caption_nums contains {{ind}} -%}
+      <div class="slide_text">{{caption_texts[captions_counter]}}</div>
+      {%- assign captions_counter= captions_counter | plus: 1 -%}
+      {%- endif -%}
+    {% endif %}
+  </div>
+  {% endfor %}
+  <a class="prev_slide" onclick="plusSlides(-1, {{slideshow_counter | minus: 1}})">👈</a>
+  <a class="next_slide" onclick="plusSlides(1,  {{slideshow_counter | minus: 1}})">👉</a>
+</div>
+
+{% if include.last_slider %}
+{% assign slideIndex_string = '[' %}
+{% assign slideId_string    = '[' %}
+{% assign showSlides_string = ''  %}
+{% for i in (1..slideshow_counter) %}
+  {% assign i_str = i | downcase %}
+  {% assign i_min = i | minus: 1 | downcase %}
+  {% assign slideIndex_string = slideIndex_string | append: '1,' %}
+  {% assign slideId_string    = slideId_string    | append: '"mySlides' | append: {{i}} | append: '",' %}
+  {% assign showSlides_string = showSlides_string    | append: 'showSlides(1, ' | append: {{i_min}} | append: ');
+  ' %}
+{% endfor %}
+{% assign slideIndex_string = slideIndex_string  | append: ']' %}
+{% assign slideId_string    =  slideId_string    | append: ']' %}
+{% assign slideIndex_string = slideIndex_string  | replace: ',]', ']' %}
+{% assign slideId_string    = slideId_string     | replace: ',]', ']' %}
+
+
+<script>
+var slideIndex = {{slideIndex_string}};
+var slideId = {{slideId_string}};
+
+{{showSlides_string}}
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+{% endif %}

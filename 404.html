@@ -1,0 +1,26 @@
+---
+layout: default
+title: Oops
+permalink: /404.html
+---
+<div class="post">
+<p>Ops, the page is not found :(</p>
+<video class='center_video' controls autoplay><source src="/files/404.mp4" type="video/mp4"></video>
+
+<p>Here are some of the previous posts, which might be interesting:</p>
+</div>
+<div class="section-padding archives__container">
+  {% for post in site.posts limit:12%}
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <div class="box">
+        <div class="cover">
+          <img src="{{post.image}}">
+        </div>
+        <div class="desc" style="padding: 10px">
+          <h4>{{post.title | truncatewords: 5}}</h4><p>{% include rus_date.html date=post.date %} in {{post.categories[0]}}<p>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+
+
