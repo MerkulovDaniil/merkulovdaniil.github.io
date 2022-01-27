@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://merkulov.top/css/main.css">
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/74cb2acb7c.js" crossorigin="anonymous"></script>
+  <!-- Mathjax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💈</text></svg>">
+  
+  
+  
+  <title>Google code styleguides</title>
+  
+  
+</head>
+  <body>
+    
+<nav class="path-header">
+  <ul class="header-nav">
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top"><span class="miniicon">  <img src="https://merkulov.top/dm_on_fire.jpg">  </span> Danya Merkulov </a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other">🤔 Other</a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other/Notes">🎶 Notes</a></li>
+      
+    
+
+    
+    <li class="header-title-block">💈 Google code styleguides</li>
+    
+  </ul>
+</nav>
+
+
+<header>
+  
+  <div class="cover">
+    
+  </div>
+  
+  
+  
+  <div class="icon">
+    💈
+  </div>
+  
+  
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="page">
+          <header class="page-header">
+          
+            
+            <div class="page-title" >Google code styleguides</div>
+            
+            
+            <p class="page-meta">
+              <time class="dt-published" datetime="23 Jan, 2022" itemprop="datePublished">
+                
+                Last edited: 23 Jan, 2022
+                
+              </time>
+            </p>
+            
+            
+            
+            
+            <table class="properties_table">
+    
+    
+    
+    <tr>
+        <td width=25%><i class="far fa-clock"></i> Created</td>
+        <td id="Created_content"> 23 Jan, 2022 </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+</table>
+            
+            
+            
+          
+          </header>
+          <div class="page-content">
+            
+            
+            <ul>
+<li><a href="https://google.github.io/styleguide/pyguide.html">Python</a></li>
+<li><a href="https://google.github.io/styleguide/htmlcssguide.html">HTML/CSS</a></li>
+<li><a href="https://github.com/JeffPaine/beautiful_idiomatic_python">Idiomatic Python</a></li>
+</ul>
+<p>Лариса еще сказала, что у них в DeepMind есть какой-то стайл гайд по JAX и всякому около MLному.</p>
+<p>Из интересного: </p>
+<ul>
+<li>
+<p>не надо в питоне в цикле инкрементально конкатенировать строчки, потому что это при каких-то условиях в питоне может иметь квадратичную сложность. Вместо этого надо все строки заносить в список и потом одной операцией его сложить.</p>
+<p>👍 YES:</p>
+<pre class="highlight"><code class="language-python">items = ['&lt;table&gt;']
+for last_name, first_name in employee_list:
+   items.append('&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name))
+items.append('&lt;/table&gt;')
+employee_table = ''.join(items)</code></pre>
+<p>👎 NO:</p>
+<pre class="highlight"><code class="language-python">employee_table = '&lt;table&gt;'
+for last_name, first_name in employee_list:
+    employee_table += '&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name)
+employee_table += '&lt;/table&gt;'</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p>Красивые многострочные строки в коде:</p>
+<p>👍 YES:</p>
+<pre class="highlight"><code class="language-python">multi_line_string = (f"Very long string with some {variable}\n",
+                                         f"inside. Wow. Such string. Much long{2}")</code></pre>
+<p>👎 NO:</p>
+<pre class="highlight"><code class="language-python">multi_line_string = f"""Very long string with some {variable}
+inside. Wow. Such string. Much long{2}"""</code></pre>
+</li>
+</ul>
+            
+            
+          </div>
+        </article>
+      </div>
+    </main>
+    
+    <footer>
+    <ul>
+        <li> <a href="https://merkulov.top/Archive/index.html"> 🏛 Archive</a> </li>
+        <li> <a class="fa fa-lg fa-telegram" href="https://t.me/bratishk" target="_blank"></a> </li>
+        <li> <a class="fa fa-lg fa-github" href="https://github.com/MerkulovDaniil" target="_blank"> </a> </li> 
+    </ul>
+</footer>
+    
+  </body>
+</html>
