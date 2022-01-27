@@ -52,3 +52,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: main
           FOLDER: _site
+          COMMIT-MESSAGE: 🤖 Deployed via notion4ever.
