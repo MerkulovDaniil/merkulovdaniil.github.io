@@ -3,7 +3,6 @@ title: PhD. Look before the Adventure
 cover: https://merkulov.top/Other/Posts/PhD._Look_before_the_Adventure/card_phd.jpeg
 icon: None
 emoji: None
-Name: 
 ---
 
 My doctoral program (at last) officially started. Here I wanna briefly highlight my personal plans on it, Skoltech requirements, interesting reading and some related stuff.

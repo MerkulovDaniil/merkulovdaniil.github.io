@@ -3,6 +3,5 @@ title: Весы, которые синхронизируются с garmin conne
 cover: None
 icon: None
 emoji: ⚖️
-Name: 
 ---
 

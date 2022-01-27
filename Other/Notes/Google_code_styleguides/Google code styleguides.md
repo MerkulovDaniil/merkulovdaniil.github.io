@@ -3,7 +3,6 @@ title: Google code styleguides
 cover: None
 icon: None
 emoji: 💈
-Name: 
 ---
 
 

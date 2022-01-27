@@ -7,7 +7,6 @@ Place: Zhestkov university
 Date: 15 Jun, 2021
 Code: 
 Presentation: 
-Name: 
 ---
 
 Notes:

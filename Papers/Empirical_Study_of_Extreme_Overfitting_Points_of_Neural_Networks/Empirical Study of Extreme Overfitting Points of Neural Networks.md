@@ -6,7 +6,6 @@ emoji: 🧠
 Video: 
 Paper: [🕸](https://arxiv.org/abs/1906.06295)
 Code: 
-Name: 
 ---
 
 In this paper we propose a method of obtaining points of extreme overfitting—parameters of modern
