@@ -5,6 +5,10 @@ icon: None
 emoji: 📦
 ---
 
+[🍵 Вкусный травяной чаек](https://merkulov.top/Other/Wishlist/Вкусный_травяной_чаек)
+
+[🚂 Steam Deck](https://merkulov.top/Other/Wishlist/Steam_Deck)
+
 [🐬 Flipper](https://merkulov.top/Other/Wishlist/Flipper)
 
 [⚖️ Весы, которые синхронизируются с garmin connect.](https://merkulov.top/Other/Wishlist/Весы,_которые_синхронизируются_с_garmin_connect.)
