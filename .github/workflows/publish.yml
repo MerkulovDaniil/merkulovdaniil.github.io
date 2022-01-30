@@ -40,6 +40,7 @@ jobs:
       - name: Run notion4ever
         run: python -m notion4ever
         env:
+            SITE_URL: "https://merkulov.top"
             NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
             NOTION_PAGE_ID: ${{secrets.NOTION_PAGE_ID}}
             
