@@ -41,6 +41,7 @@ jobs:
         run: python -m notion4ever
         env:
             SITE_URL: "https://merkulov.top"
+            INCLUDE_FOOTER: True
             NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
             NOTION_PAGE_ID: ${{secrets.NOTION_PAGE_ID}}
             
