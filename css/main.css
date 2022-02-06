@@ -310,7 +310,8 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 14px;
+  margin-top: 7.5px; }
 
 /**
  * Lists
