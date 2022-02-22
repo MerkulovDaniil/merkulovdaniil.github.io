@@ -22,3 +22,7 @@ emoji: 📜
 [📎 lagutin_mat_stat.pdf](https://merkulov.top/Other/Notes/Best_applied_math_materials/lagutin_mat_stat.pdf)
 
 <br/>
+
+Математика информационного века. Н. Литвак, А. Райгородский
+
+[📎 MathInformAge.pdf](https://merkulov.top/Other/Notes/Best_applied_math_materials/MathInformAge.pdf)
