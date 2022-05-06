@@ -16,5 +16,10 @@ emoji: 🍎
 * [GoodNotes](https://www.goodnotes.com/) - very robust handwritting tool for iPad and MacOS.
 * [Touch ID](https://davidwalsh.name/touch-sudo) instead of sudo password.
 * [Vectornator](https://www.vectornator.io/) - vector graphic editor.
+* Safari - place cursor in the search field with new tab opening by `cmd + T`:
+
+	```bash
+	**defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES**
+	```
 
 <br/>
