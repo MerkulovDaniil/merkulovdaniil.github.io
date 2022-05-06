@@ -19,7 +19,7 @@ emoji: 🍎
 * Safari - place cursor in the search field with new tab opening by `cmd + T`:
 
 	```bash
-	**defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES**
+	defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES
 	```
 
 <br/>
