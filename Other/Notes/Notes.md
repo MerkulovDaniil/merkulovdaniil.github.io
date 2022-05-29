@@ -5,6 +5,8 @@ icon: None
 emoji: 🎶
 ---
 
+[🍓 My raspberry PI home setup](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup)
+
 [🍎 My favourite MacOS utilities](https://merkulov.top/Other/Notes/My_favourite_MacOS_utilities)
 
 [🚴‍♀️ ТО велосипеда checklist](https://merkulov.top/Other/Notes/ТО_велосипеда_checklist)

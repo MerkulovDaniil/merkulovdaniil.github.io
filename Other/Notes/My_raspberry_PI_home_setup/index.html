@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="My raspberry PI home setup" />
+  <meta property="og:image" content=" https://merkulov.top/ineq_constr_10.svg " />
+  <meta property="og:description" content="# Install [Raspbian](https://www.raspberrypi.com/software/) on the microSD card.
+
+If you want to run your machine in a headless mode, it is very conve" />
+  <meta property='og:site_name' content="Danya Merkulov" />
+  <meta property="og:url" content="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup" />
+  <link rel="stylesheet" href="https://merkulov.top/css/main.css">
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/74cb2acb7c.js" crossorigin="anonymous"></script>
+  <!-- Mathjax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍓</text></svg>">
+  
+  
+  
+  <title>My raspberry PI home setup</title>
+  
+  
+</head>
+  <body>
+    
+<nav class="path-header">
+  <ul class="header-nav">
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top"><span class="miniicon">  <img src="https://merkulov.top/dm_on_fire.jpg">  </span> Danya Merkulov </a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other">🤔 Other</a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other/Notes">🎶 Notes</a></li>
+      
+    
+
+    
+    <li class="header-title-block">🍓 My raspberry PI home setup</li>
+    
+  </ul>
+</nav>
+
+
+<header>
+  
+  <div class="cover">
+    
+  </div>
+  
+  
+  
+  <div class="icon">
+    🍓
+  </div>
+  
+  
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="page">
+          <header class="page-header">
+          
+            
+            <div class="page-title" >My raspberry PI home setup</div>
+            
+            
+            <p class="page-meta">
+              <time class="dt-published" datetime="29 May, 2022" itemprop="datePublished">
+                
+                Last edited: 29 May, 2022
+                
+              </time>
+            </p>
+            
+            
+            
+            
+          
+          </header>
+          <div class="page-content">
+            
+            
+            <h1>Install <a href="https://www.raspberrypi.com/software/">Raspbian</a> on the microSD card.</h1>
+<p>If you want to run your machine in a headless mode, it is very convenient to setup the following things: </p>
+<p>
+<figure><img src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_13.05.24.png" /><figcaption>You would probably need to setup SSH keys before it.</figcaption>
+</figure>
+</p>
+<p>
+<figure><img src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_13.05.35.png" /><figcaption>You can even prerecord WIFI password.</figcaption>
+</figure>
+</p>
+<p>
+<figure><img src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_13.05.45.png" /><figcaption>It was once, that 5g network was only available, when you choose US as a Wireless LAN country.</figcaption>
+</figure>
+</p>
+<h1>Install Anydesk in a headless mode.</h1>
+<p>That’s an awesome way to connect to your Raspberry Pi via internet without any issues. It is free for the personal use and gives you a lot of tools.</p>
+<ol>
+<li>
+<p>Download the package (or see the instructions <a href="http://deb.anydesk.com/howto.html">here</a>):</p>
+<pre class="highlight"><code class="language-bash">sudo apt update
+sudo apt full-upgrade
+wget https://download.anydesk.com/rpi/anydesk_6.1.1-1_armhf.deb</code></pre>
+</li>
+<li>
+<p>Install anydesk</p>
+<pre class="highlight"><code class="language-bash">sudo dpkg -i anydesk_6.1.1-1_armhf.deb
+sudo apt-get install -f</code></pre>
+<p>You will probably need these dependencies:</p>
+<pre class="highlight"><code class="language-bash">sudo apt install libminizip1 libegl1-mesa</code></pre>
+</li>
+<li>
+<p>Fix the absense of the physical screen (<code>display_server_not_supported</code> error):</p>
+<p>Run in the terminal:</p>
+<pre class="highlight"><code class="language-bash">sudo nano /boot/config.txt</code></pre>
+<p>And uncomment the <code>hdmi_force_hotplug=1</code> line:</p>
+<p><img alt="" src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_14.22.36.png" /></p>
+<p><br/></p>
+</li>
+<li>
+<p>Check everything:</p>
+<pre class="highlight"><code class="language-bash">anydesk
+anydesk --get-id
+anydesk --version</code></pre>
+<p><img alt="" src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_14.45.33.png" /></p>
+<p>Here is the <a href="https://support.anydesk.com/knowledge/command-line-interface-for-linux#installation-commands">link</a> to the command line commands for AnyDesk. The most important one is setting password for the access. You will probably need to reboot Raspberry Pi.</p>
+<p>Congratulations! Now you anydesk server will run after reboot and you will be able to connect to it and transfer files remote control even over the internet (not in the local network).</p>
+</li>
+</ol>
+            
+            
+          </div>
+        </article>
+      </div>
+    </main>
+    
+    
+    <footer>
+    <ul>
+        <li> <a href="https://merkulov.top/Archive/index.html"> 🏛 Archive</a> </li>
+        <li> <a class="fa fa-lg fa-telegram" href="https://t.me/bratishk" target="_blank"></a> </li>
+        <li> <a class="fa fa-lg fa-github" href="https://github.com/MerkulovDaniil" target="_blank"> </a> </li> 
+    </ul>
+</footer>
+    
+    
+  </body>
+</html>
