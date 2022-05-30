@@ -67,3 +67,32 @@ That’s an awesome way to connect to your Raspberry Pi via internet without any
 	Here is the [link](https://support.anydesk.com/knowledge/command-line-interface-for-linux#installation-commands) to the command line commands for AnyDesk. The most important one is setting password for the access. You will probably need to reboot Raspberry Pi.
 
 	Congratulations! Now you anydesk server will run after reboot and you will be able to connect to it and transfer files\ remote control even over the internet (not in the local network).
+
+	# Back up your google drive cloud storage to local HDD daily.
+
+	[rclone](https://rclone.org/drive/) utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using [crontab](https://crontab.guru).
+
+	```bash
+	sudo crontab -e
+	```
+
+	![0 6 * * * /sbin/shutdown -r now
+0 3 * * * sh ~/backup_from_drive.sh
+
+It means, that Raspberry Pi reboots each morning at 6:00; and backs up each night at 3:00.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.24.11.png)
+
+	![rclone sync remote_macbook: /media/pi/HDD/Backups/drive_macbook -P
+
+Backup script could include several folders, cloud providers or some logging utilities.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.23.18.png)
+
+	# Install Docker
+
+	[Now](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script) it’s super easy 😀:
+
+	```bash
+	curl -fsSL https://get.docker.com -o get-docker.sh
+	sudo sh get-docker.sh
+	pip install docker compose
+	```
+
+	<br/>
