@@ -1,6 +1,6 @@
 ---
 title: Danya Merkulov
-cover: https://merkulov.top/ineq_constr_10.svg
+cover: https://merkulov.top/PXL_20220625_221620794.MP2.jpg
 icon: https://merkulov.top/dm_on_fire.jpg
 emoji: None
 ---
