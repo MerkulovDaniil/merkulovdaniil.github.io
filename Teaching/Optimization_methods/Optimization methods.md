@@ -5,6 +5,8 @@ icon: None
 emoji: 🎢
 ---
 
+[🏋️‍♂️ Big models](https://merkulov.top/Teaching/Optimization_methods/Big_models)
+
 [🚜 Optimization methods](https://merkulov.top/Teaching/Optimization_methods/Optimization_methods)
 
 [📉 Введение в практические методы оптимизации](https://merkulov.top/Teaching/Optimization_methods/Введение_в_практические_методы_оптимизации)
