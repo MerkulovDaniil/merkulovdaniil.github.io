@@ -8,9 +8,9 @@ Place: AIRI Summer school
 Role: Team Leader
 ---
 
-[📎 BigModels_-_Темы_проектов.pptx](https://merkulov.top/Teaching/Optimization_methods/Big_models/BigModels_-_Темы_проектов.pptx)
+# Materials
 
-# Lectures
+## Lectures
 
 * Methods for training large-scale deep learning models by Ivan Oseledets
 
@@ -32,14 +32,42 @@ Role: Team Leader
 
 	[📎 AIRI_Summer_school__CNNs_speed_up_and_compression.pdf](https://merkulov.top/Teaching/Optimization_methods/Big_models/AIRI_Summer_school__CNNs_speed_up_and_compression.pdf)
 
-<br/>
+## Materials
+
+* Project proposals
+
+	[📎 BigModels_-_Темы_проектов.pptx](https://merkulov.top/Teaching/Optimization_methods/Big_models/BigModels_-_Темы_проектов.pptx)
+
+* NeuroKorzh huggingface space
+
+	[https://huggingface.co/spaces/big-kek/NeuroKorzh](https://huggingface.co/spaces/big-kek/NeuroKorzh)
+
+* Big language model training
+
+	[📎 BM4_BigKek.pptx](https://merkulov.top/Teaching/Optimization_methods/Big_models/BM4_BigKek.pptx)
+
+* Two stage recommender system presentation
+
+	[📎 RecSys_Presentation.pdf](https://merkulov.top/Teaching/Optimization_methods/Big_models/RecSys_Presentation.pdf)
+
+	[📎 RecSys_Presentation.pptx](https://merkulov.top/Teaching/Optimization_methods/Big_models/RecSys_Presentation.pptx)
+
+* Quantization presentation
+
+	[📎 квантизация_аири.pdf](https://merkulov.top/Teaching/Optimization_methods/Big_models/квантизация_аири.pdf)
+
+* Accelerating ALS for tensor ring decomposition
+
+	[📎 Accelerating_TR-ALS.pdf](https://merkulov.top/Teaching/Optimization_methods/Big_models/Accelerating_TR-ALS.pdf)
+
+	[📎 Accelerating_TR-ALS.pptx](https://merkulov.top/Teaching/Optimization_methods/Big_models/Accelerating_TR-ALS.pptx)
 
 # Moments
 
-![Evgeny Frolov](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
+![Evgeny Frolov.](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
 
-![Daniil Merkulov](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
+![Daniil Merkulov.](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
 
-![BigKeK team (neuroKorzh authors)](https://merkulov.top/Teaching/Optimization_methods/Big_models/DSC_7519.jpg)
+![BigKeK team members (Vladislav Ryabykh, Mikhail Ipatov) + Big models leaders (Nazarii Tupitsa, Daniil Merkulov) are prizewinners in intellectual game.](https://merkulov.top/Teaching/Optimization_methods/Big_models/DSC_7519.jpg)
 
-<br/>
+![Group photo.](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.png)

@@ -34,4 +34,6 @@ Role: Seminarist
 
 	* Colab Notebook: [👨‍💻](https://colab.research.google.com/drive/1pu4_PSkCn5lsB9WvGlyvR6UsQeqakJS-?usp=sharing)
 
-	<br/>
+![Young Russian optimization researchers](https://merkulov.top/Teaching/Numerical_Linear_Algebra/Matrix_and_Tensor_methods_in_Machine_Learning/IMG_0039.jpg)
+
+<br/>
