@@ -66,7 +66,7 @@ Role: Team Leader
 
 ![Evgeny Frolov.](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
 
-![Daniil Merkulov.](https://merkulov.top/Teaching/Optimization_methods/Big_models/Untitled.jpeg)
+![](https://merkulov.top/Teaching/Optimization_methods/Big_models/dm.jpeg)
 
 ![BigKeK team members (Vladislav Ryabykh, Mikhail Ipatov) + Big models leaders (Nazarii Tupitsa, Daniil Merkulov) are prizewinners in intellectual game.](https://merkulov.top/Teaching/Optimization_methods/Big_models/DSC_7519.jpg)
 

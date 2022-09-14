@@ -5,13 +5,13 @@ icon: None
 emoji: 📦
 ---
 
+[👞 Сертификат в ECCO](https://merkulov.top/Other/Wishlist/Сертификат_в_ECCO)
+
 [🤿 Костюм Дарта Вейдера](https://merkulov.top/Other/Wishlist/Костюм_Дарта_Вейдера)
 
 [🎸 Беспроводная гитара для clone hero](https://merkulov.top/Other/Wishlist/Беспроводная_гитара_для_clone_hero)
 
 [🍵 Вкусный травяной чаек](https://merkulov.top/Other/Wishlist/Вкусный_травяной_чаек)
-
-[🚂 Steam Deck](https://merkulov.top/Other/Wishlist/Steam_Deck)
 
 [🐬 Flipper](https://merkulov.top/Other/Wishlist/Flipper)
 
