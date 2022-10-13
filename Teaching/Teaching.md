@@ -11,6 +11,4 @@ emoji: 👨‍🏫
 
 [📢 Talks](https://merkulov.top/Teaching/Talks)
 
-[🚂 School materials](https://merkulov.top/Teaching/School_materials)
-
 <br/>
