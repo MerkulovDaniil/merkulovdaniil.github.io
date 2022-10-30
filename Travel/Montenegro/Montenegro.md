@@ -214,8 +214,6 @@ Date: 24 Aug, 2021 - 02 Sep, 2021
 
 Очень приколдесный мост. 
 
-![](https://merkulov.top/Travel/Montenegro/IMG_4264.jpeg)
-
 ![](https://merkulov.top/Travel/Montenegro/20210829_142407.jpeg)
 
 ![](https://merkulov.top/Travel/Montenegro/IMG_4227.jpeg)
