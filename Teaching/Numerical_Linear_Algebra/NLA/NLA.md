@@ -2,7 +2,7 @@
 title: NLA
 cover: None
 icon: None
-emoji: 🚅
+emoji: 🚄
 Date: 01 Nov, 2022 - 30 Dec, 2022
 Language: 🇬🇧
 Place: Skoltech

@@ -5,6 +5,8 @@ icon: None
 emoji: 🎢
 ---
 
+[🧇 Introduction to stochastic optimization for large-scale problem](https://merkulov.top/Teaching/Optimization_methods/Introduction_to_stochastic_optimization_for_large-scale_problem)
+
 [🌠 Optimization methods](https://merkulov.top/Teaching/Optimization_methods/Optimization_methods)
 
 [🐌 Численные методы оптимизации](https://merkulov.top/Teaching/Optimization_methods/Численные_методы_оптимизации)
