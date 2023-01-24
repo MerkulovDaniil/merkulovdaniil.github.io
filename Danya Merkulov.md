@@ -5,7 +5,7 @@ icon: https://merkulov.top/dm_on_fire.jpg
 emoji: None
 ---
 
-I am Junior Researcher at Skolkovo Institute of Science and Technology and Senior Lecturer at Moscow Institute of Physics and Technology. 
+I am Junior Researcher at Skolkovo Institute of Science and Technology and Assistant Professor at Moscow Institute of Physics and Technology. 
 
 [📜 Papers](https://merkulov.top/Papers)
 
