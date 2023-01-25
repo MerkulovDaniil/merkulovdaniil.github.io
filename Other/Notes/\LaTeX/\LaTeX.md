@@ -2,14 +2,38 @@
 title: \LaTeX
 cover: None
 icon: None
-emoji: 📕
+emoji: 📄
 ---
 
 Suppose you want to create small beautiful notes with a full support of $ \LaTeX $ math inside, but a little bit easier than compiling a document or creating a project in overleaf.
 
 ![You could easily do it in $ \LaTeX $ or Word, but I like the readability of the source code in markdown.](https://merkulov.top/Other/Notes/\LaTeX/Screenshot_2023-01-25_at_18.15.13.png)
 
-I like the simplicity, readability and 
+I like the simplicity, readability and timelessness (omg, does this word exist? I mean, that the simpler the technology - the higher the probability, that you could use it years later) of Markdown. So, you can visually edit it, reuse parts of previous documetns easily and a lot more. For example, the source code for the previous document is as simple as:
+
+```markdown
+# Test. Duality.
+| Name |  1   |  2   | $$\sum$$ |
+| ---- | :--: | :--: | :----: |
+|      |  /7  |  /3  |  /10   |
+
+Consider the problem of projection of some point $$y \in \mathbb{R}^n,  y \notin \Delta^n$$ onto the probability simplex $$\Delta^n$$.
+
+$$
+\begin{split}
+& \|x - y \|_2^2 \to \min\limits_{x \in \mathbb{R}^n }\\
+\text{s.t. } & 1^\top x = 1, \\
+& x \succeq 0 
+\end{split}
+$$
+    
+
+1. Formulate the dual problem.
+1. Do we have strong duality here?
+
+```
+
+To obtain this result you’ll need to do these steps:
 
 1. Install **[VSCode](https://code.visualstudio.com)**.
 1. Install **[Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/?id=markdown-preview-enhanced)**** extension.**
@@ -18,7 +42,7 @@ I like the simplicity, readability and
 	1. Run `Markdown Preview Enhanced: Customize Css` command.
 
 		<p><div class="res_emb_block">
-<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230125T153409Z&X-Amz-Expires=3600&X-Amz-Signature=374150e822f60a8a072f7c5758d6534f975dbb89fcfc4242ba25b02541850627&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230125T164340Z&X-Amz-Expires=3600&X-Amz-Signature=c58881ccf8d39a31c48b81c84fc437b12d4c8577a5539f5f9911b5fc2106f3f5&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
 </div></p>
 
 	1. Configure `style.less` file.
@@ -136,5 +160,3 @@ This is mine (in fact, I’ve just copied fonts from the css for this site):
   }
 }
 ```
-
-<br/>

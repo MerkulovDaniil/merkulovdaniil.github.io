@@ -5,7 +5,7 @@ icon: None
 emoji: 🎶
 ---
 
-[📕 \LaTeX](https://merkulov.top/Other/Notes/\LaTeX)
+[📄 \LaTeX](https://merkulov.top/Other/Notes/\LaTeX)
 
 [🍓 My raspberry PI home setup](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup)
 
