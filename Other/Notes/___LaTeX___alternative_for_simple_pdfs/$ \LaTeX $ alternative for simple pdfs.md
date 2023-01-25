@@ -42,7 +42,7 @@ To obtain this result you’ll need to do these steps:
 	1. Run `Markdown Preview Enhanced: Customize Css` command.
 
 		<p><div class="res_emb_block">
-<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230125T192832Z&X-Amz-Expires=3600&X-Amz-Signature=8bf8677b99fc4893394761e009475c62bc7bfdba0f360fee10821c04184e7693&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230125T203335Z&X-Amz-Expires=3600&X-Amz-Signature=e4df51b3fb9032fb9db630e876e5cb92f2ced991037eeecc870c68b8acf4a1d2&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
 </div></p>
 
 	1. Configure `style.less` file.
