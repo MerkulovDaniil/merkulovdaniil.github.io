@@ -42,7 +42,7 @@ To obtain this result you’ll need to do these steps:
 	1. Run `Markdown Preview Enhanced: Customize Css` command.
 
 		<p><div class="res_emb_block">
-<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230126T063812Z&X-Amz-Expires=3600&X-Amz-Signature=b05e1d2da9483fd558b8715e2630c4e94945e5e9a70b2be7f5659cfa53b7ca44&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230126T073016Z&X-Amz-Expires=3600&X-Amz-Signature=a49c2669d0907b974a4b80de843b25844ed4392fa2d9aa39148f824f092f8fde&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
 </div></p>
 
 	1. Configure `style.less` file.
