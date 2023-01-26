@@ -117,7 +117,8 @@
 <p>Итак, Вы установили Python, Jupyter и еще много всякого. Как же запускать jupyter notebook без боли в произвольной папке?</p>
 <h3>Как быстро запускать jupyter notebook</h3>
 <p>Достаточно создать исполняемый скрипт, запускаемый двойным нажатием со следующим содержанием:</p>
-<pre class="highlight"><code class="language-bash">jupyter notebook --notebook-dir='C:\\Users\\bratishka\\Desired_folder'</code></pre>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>notebook<span class="w"> </span>--notebook-dir<span class="o">=</span><span class="s1">&#39;C:\\Users\\bratishka\\Desired_folder&#39;</span>
+</code></pre></div>
 <p>В Windows это будет файл с расширением <code>.bat</code>, в Linux <code>.sh</code>, который можно редактировать с помощью любого текстового редактора (например, моего любимого <a href="https://www.sublimetext.com/">sublime</a>). Обратите внимание на то, что бэкслэши в примере двойные - это сделано, чтобы избежать проблем с кодировками (иногда, например, <code>\U</code> в адресе папки может сильно подпортить Вам жизнь:) )</p>
 <h3>Запуск тетрадок онлайн</h3>
 <p>Прежде всего, существует <em>(upd: уже не совсем. Теперь сразу происходит запуск контейнера на binder, см.ниже, но ссылка должна редиректить правильно)</em> официальный сервис <a href="https://try.jupyter.org/">try.jupyter.org</a>. Туда можно загрузить и скомпилировать несложный ноутбук. Следует быть аккуратным, ведь виртуальный сервер, который Вам выделяется при запуске <del>кекается</del> падает через 10 минут бездействия. Данная опция подходит прежде всего в том случае, когда Вам нужно быстро собрать что то на коленке (или даже в дороге!) или возникли неожиданные проблемы с компьютером.</p>
@@ -137,15 +138,18 @@
 <p>Впрочем, если Вы занимаетесь вычислительно интенсивной работой (например, <a href="https://coub.com/view/1069gn">DEEP MACHINE LEARNING</a>), binder Вам не подойдет, поскольку его вычислительных мощностей часто катастрофически не хватает для современных реальных задач (нас спасет docker - см. ниже). В то же время, никто не мешает оформить там проект по вычматам или лабы и выложить у себя на гитхабе. Вот, например, <a href="https://github.com/minrk/ligo-binder">проект</a> с анализом данных, полученных с детектора гравитационных волн LIGO.</p>
 <h3>Запуск ядра jupyter на стороннем сервере в один клик</h3>
 <p>Предположим, у Вас имеется лабораторный сервер, на котором Вам можно проводить вычисления и у Вас есть собственный юзер на нем. Во первых, мы предполагаем, что Вы с ним находитесь в одной локальной сети (иначе может быть нужно настроить ВПН). Во вторых, способ, который я сейчас напишу совсем несекьюрный :name_badge: и пользоваться им не надо. Однако, если <del>Вам пофиг</del> Вы уверены в том, что злоумышленников Вы не интересуете, вот он для винды: * На серваке поднимаете крутиться ядро jupyter так, чтобы оно не зависело от наличия подключения (чтобы, например, ночью ставить вычисления). Это можно делать с помощью эмуляторов терминала (<code>tmux</code> или <code>screen</code>) или с помощью <code>docker</code>. Ниже опишу первый способ. Заходите в терминал Вашего сервачка и пишите:</p>
-<pre class="highlight"><code class="language-plain_text">tmux</code></pre>
+<div class="highlight"><pre><span></span><code>tmux
+</code></pre></div>
 <p>Затем:</p>
-<pre class="highlight"><code class="language-plain_text">jupyter notebook --no-browser --port=8860</code></pre>
+<div class="highlight"><pre><span></span><code>jupyter notebook --no-browser --port=8860
+</code></pre></div>
 <p>Поздравляю, этот сервер будет крутиться до посинения, пока Вы не зайдете обратно в эмулятор терминала (<code>tmux a -t 0</code>) и не выключите его (это иногда стоит делать, потому что юпитер имеет свойство сжирать много памяти и не переживать об этом - коллеги спасибо не скажут).</p>
 <ul>
 <li>Создаете <code>.bat</code> файл со следующим содержанием на своем рабочем столе (к этому моменту у Вас уже установлена Putty, которая Вам точно нужна, если Вы любите Windows). Напишите там следующие 2 строчки и запускайте потом по двойному клику!</li>
 </ul>
-<pre class="highlight"><code class="language-plain_text">start "" "C:\Program Files\PuTTY\putty.exe" -ssh -N USERNAME@SERVERIP -pw PASSWORD -L 127.0.0.1:8860:SERVERIP:8860
-start http://127.0.0.1:8860</code></pre>
+<div class="highlight"><pre><span></span><code>start &quot;&quot; &quot;C:\Program Files\PuTTY\putty.exe&quot; -ssh -N USERNAME@SERVERIP -pw PASSWORD -L 127.0.0.1:8860:SERVERIP:8860
+start http://127.0.0.1:8860
+</code></pre></div>
 <ul>
 <li>Вы прекрасны!</li>
 </ul>
@@ -158,17 +162,20 @@ start http://127.0.0.1:8860</code></pre>
 <p>Библиотека для эффективной работы с многомерными массивами. Преобразование Фурье, матричные преобразования, разложения - туда же. Значительная часть функций библиотеки реализована на C, засчет чего библиотека работает достаточно эффективно. Tutorial по <a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">ссылке</a>, однако данная библиотека является стандартом де-факто на сегодняшний день и очень тяжело придумать проблему, которую в numpy нельзя решить путем не очень активного гугления.</p>
 <h3>matplotlib</h3>
 <p>Библиотека для построения графиков. Здесь алгоритм простой: заходите на <a href="https://matplotlib.org/gallery/index.html">сайт</a>, тыкаете на пример, который больше всего похож на тот, что у Вас в голове, копипасите код и доводите до блеска. Приведу лишь парочку трюков:</p>
-<pre class="highlight"><code class="language-python"># Если вставить вот такую строчку перед рисованием графиков,
-# они будут отрисовываться в стиле комиксов
-import matplotlib.pyplot as pltplt.xkcd()</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Если вставить вот такую строчку перед рисованием графиков,</span>
+<span class="c1"># они будут отрисовываться в стиле комиксов</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pltplt.xkcd</span><span class="p">()</span>
+</code></pre></div>
 <p><img alt="" src="https://merkulov.top/Other/Posts/Быстрый_старт_в_научные_вычисления/xkcd.png" /></p>
-<pre class="highlight"><code class="language-python"># А если вставить такую строчку перед рисованием графиков,# они будут отрисовываться в другом стиле.
-import seaborn</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># А если вставить такую строчку перед рисованием графиков,# они будут отрисовываться в другом стиле.</span>
+<span class="kn">import</span> <span class="nn">seaborn</span>
+</code></pre></div>
 <p><img alt="" src="https://merkulov.top/Other/Posts/Быстрый_старт_в_научные_вычисления/seaborn.png" /></p>
 <p>Вообще говоря, seaborn - это отдельная библиотека, которая работает в тесной связке с matplotlib, но имеет много своих <a href="https://seaborn.pydata.org/examples/index.html">фишечек</a>.</p>
 <hr />
 <p>Особенно хотелось бы выделить интерактивный режим работы с графиками в jupyter notebook. Если в начале ячейки прописать:</p>
-<pre class="highlight"><code class="language-python">%matplotlib notebook</code></pre>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+</code></pre></div>
 <p>То будут доступны прикольные штуки, типа интерактивного зума в выделенное окно, изменение размера фигуры и прочее:</p>
 <p><img alt="" src="https://merkulov.top/Other/Posts/Быстрый_старт_в_научные_вычисления/matplotlib_notebook.gif" /></p>
 <p>Из минусов: рендеринг очень медленный (особенно, если график “тяжелый”), иногда глючит (особенно, если менять бекенд для отрисовки графиков в работающем ядре - т.е. если сначала у вас было <code>%matplotlib inline</code>, то после замены на <code>%matplotlib notebook</code> может кекнуться - решается перезапуском Kernel). Для интерактивных графиков можно так же использовать библиотеки <a href="https://bokeh.pydata.org/en/latest/docs/gallery.html">bokeh</a> (<a href="https://demo.bokehplots.com/apps/movies">демка</a>, иллюстрирующая работу bokeh на IMDB) и <a href="https://plot.ly/">plot.ly</a> (если разобраться в документации, ее вполне себе можно использовать бесплатно, вот средненький <a href="http://nbviewer.jupyter.org/github/merkulovdaniil/mipt_optimization/blob/master/lectures/1.%20Introduction/1_introduction.ipynb">пример</a>)</p>
@@ -182,9 +189,11 @@ import seaborn</code></pre>
 <p>Позволяет ускорять какие-то куски кода с помощью старого доброго <code>C</code>. Не совсем библиотека, но</p>
 <h3>прочее</h3>
 <p>Не забывать:</p>
-<pre class="highlight"><code class="language-plain_text">import this</code></pre>
+<div class="highlight"><pre><span></span><code>import this
+</code></pre></div>
 <p>Быстрое и честное умножение матриц (в т.ч. векторов):</p>
-<pre class="highlight"><code class="language-plain_text">A @ B</code></pre>
+<div class="highlight"><pre><span></span><code>A @ B
+</code></pre></div>
 <h3>Git</h3>
 <p>Представьте, что Вам нужно сделать проект, который в процессе его создания будет нужен кому-то, кроме Вас (например, Вы делаете диплом, а научный руководитель будет не против видеть ежедневный маленький прогресс, писать свои комментарии, а, быть может, и куски кода). В зависимости от сложности проекта, существует много решений: папка в облаке, сервис таск менеджмента типа <code>trello</code> и т.д. Совершенно особое место в этой группе занимает система контроля версий <code>git</code> - она не очень интуитивно понятна для человека, не занимавшегося разработкой ранее, но это та вещь, от которой не получится убежать в процессе своего развития. То есть, если Вы очень долго говорите что то в стиле “ну хз, гит не для меня, мне и <code>папочки</code> хватает”, то рядом с Вами окажется туча людей, с которыми будет в тысячу раз удобнее работать (они-то знают гит), чем с Вами.</p>
 <p>К тому же, когда есть такие туториалы, то всё это достаточно быстро имеет риск стать понятным и удобным для Вас без особых боев. Я бы рекомендовал следующую последовательность действий для того, чтобы увеличить свою ценность на рынке труда :zap: :</p>
@@ -265,24 +274,28 @@ import seaborn</code></pre>
 <h3>nbconvert</h3>
 <p>Часто возникает ситуация сохранить то, что Вы написали в <code>jupyter notebook</code> как самостоятельный файл, доступный без поднятия сервера <code>jupyter</code>. Например, Вы написали семинар, в котором есть код, результаты его работы, немного формул и хотите его распространить. На помощь придет <code>[nbconvert](https://github.com/jupyter/nbconvert)</code>. Если Вы скачали anaconda, этот пакет уже должен быть включен в Ваш набор. Ниже я приведу конкретные ситуации когда он может быть полезен:</p>
 <h3>Сконвертировать jupyter notebook в <code>.html</code>:</h3>
-<pre class="highlight"><code class="language-bash">jupyter nbconvert my_cool_notebook.ipynb</code></pre>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>my_cool_notebook.ipynb
+</code></pre></div>
 <p><code>.html</code> является дефолтным форматом. Самым же простым способом сохранить Ваш jupyter notebook в <code>.pdf</code> формат будет банальное сохранение полученного <code>.html</code> файла в <code>.pdf</code> (печать страницы) - это не потребует от Вас никаких телодвижений и сойдет в большинстве случаев.</p>
 <h3>Сконвертировать jupyter notebook в <code>.pdf</code> красиво (<code>.ipynb</code> → <code>.tex</code> → <code>.pdf</code> ):</h3>
-<pre class="highlight"><code class="language-bash">jupyter nbconvert --to pdf my_cool_notebook.ipynb</code></pre>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>pdf<span class="w"> </span>my_cool_notebook.ipynb
+</code></pre></div>
 <p>Конечно, не все так просто. Во первых, на компьютере должен быть установлен $ \TeX $. Если его (на каком-то основании) не имеется - см.выше или <a href="http://nbconvert.readthedocs.io/en/latest/install.html#installing-tex">сюда</a>. Во вторых, у Вас почти наверное будут проблемы с русским языком. Дело в том, что шаблоны, по которым <code>nbconvert</code> конвертит это дело в <code>.tex</code> файл ничего не знают о том, что Вам нужен русский, или о том, что Вам нужен другой шрифт, или еще о чем то (например, мне было нужно, чтобы input ячейки с кодом не выводились в <code>.pdf</code> файл). Для решения этих проблем Вам нужно зайти в папку с библиотекой с шаблонами <code>nbconvert</code>. У меня такая:</p>
-<pre class="highlight"><code class="language-bash">C:\Users\MYNENAVIDIMTEBYATRUMP\Anaconda3\Lib\site-packages\nbconvert\templates\latex</code></pre>
+<div class="highlight"><pre><span></span><code>C:<span class="se">\U</span>sers<span class="se">\M</span>YNENAVIDIMTEBYATRUMP<span class="se">\A</span>naconda3<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\n</span>bconvert<span class="se">\t</span>emplates<span class="se">\l</span>atex
+</code></pre></div>
 <p>И заменить Ваш файл <code>base.tplx</code> на <a href="/files/posts/scicomp/base.tplx">мой</a>:)</p>
 <p>Что есть:</p>
 <ul>
 <li>Поддержка кириллицы и латиницы одинаковым шрифтом</li>
 <li>Скрыты все ячейки с кодом, оставлены только output. (чтобы включить input конкретной ячейки или выключить её output в <code>.pdf</code> необходимо в метаданных ячейки прописать следующее:</li>
 </ul>
-<pre class="highlight"><code class="language-json">{
-"tags": [
-"jupyter:stay_input", # Оставить эту строчку, если хотите оставить input ячейки
-"jupyter:hide_output" # Скрыть output ячейки
-]
-}</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="s2">&quot;jupyter:stay_input&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="err">Оставить</span><span class="w"> </span><span class="err">эту</span><span class="w"> </span><span class="err">строчку</span><span class="p">,</span><span class="w"> </span><span class="err">если</span><span class="w"> </span><span class="err">хотите</span><span class="w"> </span><span class="err">оставить</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span><span class="w"> </span><span class="err">ячейки</span>
+<span class="s2">&quot;jupyter:hide_output&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="err">Скрыть</span><span class="w"> </span><span class="err">ou</span><span class="kc">t</span><span class="err">pu</span><span class="kc">t</span><span class="w"> </span><span class="err">ячейки</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Для того, чтобы изменения вступили в силу при печати пдфки, ячейку надо запустить. * Картинки, которые выводятся matplotlibом вставляются в pdfку без проблем</p>
 <p>Чего не хватает:</p>
 <ul>
@@ -293,7 +306,8 @@ import seaborn</code></pre>
 <p>Презентации, сделанные прямо в jupyter - невероятно удобная и структурирующая штука. <a href="https://github.com/damianavila/RISE">Здесь</a> вся документация, установка, примеры и т.д. От себя, опять же, добавлю некоторые фишечки.</p>
 <h3>Jupyter презентация оффлайн</h3>
 <p>Для того, чтобы сохранить то, что Вы сделали, например, для показа позже без интернета надо проделать следующие манипуляции: 1. Скачать библиотеку <code>reveal.js</code> для рендеринга слайдов. Сделать это можно с официального <a href="https://revealjs.com/">сайта</a>, или с этого прекрасного <a href="/files/posts/scicomp/reveal.js.zip">сайта</a>. После распаковки архива получится папочка <code>reveal.js</code> с файлами. 2. Запустить <code>nbconvert</code> явно указав, что библиотеку <code>reveal.js</code> надо брать локально, а не в интернете ключом <code>-reveal-prefix=PATHTOREVEAL.js</code> . У меня, например, папка <code>reveal.js</code> находится на уровень выше папки с jupyter ноутбуком:</p>
-<pre class="highlight"><code class="language-bash">jupyter nbconvert --to slides MEGA_PRESENTATION.ipynb --reveal-prefix = ../reveal.js</code></pre>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>slides<span class="w"> </span>MEGA_PRESENTATION.ipynb<span class="w"> </span>--reveal-prefix<span class="w"> </span><span class="o">=</span><span class="w"> </span>../reveal.js
+</code></pre></div>
 <ol>
 <li><del>PROFIT!!!11!</del> Открываем получившийся файл в браузере без интернета (могут быть кеки со шрифтами, если их нет в системе - особенно актуально для кириллических шрифтов)</li>
 </ol>

@@ -118,27 +118,31 @@
 <li>
 <p>не надо в питоне в цикле инкрементально конкатенировать строчки, потому что это при каких-то условиях в питоне может иметь квадратичную сложность. Вместо этого надо все строки заносить в список и потом одной операцией его сложить.</p>
 <p>👍 YES:</p>
-<pre class="highlight"><code class="language-python">items = ['&lt;table&gt;']
-for last_name, first_name in employee_list:
-   items.append('&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name))
-items.append('&lt;/table&gt;')
-employee_table = ''.join(items)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;table&gt;&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span> <span class="ow">in</span> <span class="n">employee_list</span><span class="p">:</span>
+   <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&lt;tr&gt;&lt;td&gt;</span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">&lt;/td&gt;&lt;/tr&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">))</span>
+<span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&lt;/table&gt;&#39;</span><span class="p">)</span>
+<span class="n">employee_table</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div>
 <p>👎 NO:</p>
-<pre class="highlight"><code class="language-python">employee_table = '&lt;table&gt;'
-for last_name, first_name in employee_list:
-    employee_table += '&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name)
-employee_table += '&lt;/table&gt;'</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">employee_table</span> <span class="o">=</span> <span class="s1">&#39;&lt;table&gt;&#39;</span>
+<span class="k">for</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span> <span class="ow">in</span> <span class="n">employee_list</span><span class="p">:</span>
+    <span class="n">employee_table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;tr&gt;&lt;td&gt;</span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">&lt;/td&gt;&lt;/tr&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">)</span>
+<span class="n">employee_table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/table&gt;&#39;</span>
+</code></pre></div>
 </li>
 </ul>
 <ul>
 <li>
 <p>Красивые многострочные строки в коде:</p>
 <p>👍 YES:</p>
-<pre class="highlight"><code class="language-python">multi_line_string = (f"Very long string with some {variable}\n",
-    f"inside. Wow. Such string. Much long{2}")</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Very long string with some </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;inside. Wow. Such string. Much long</span><span class="si">{</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>👎 NO:</p>
-<pre class="highlight"><code class="language-python">multi_line_string = f"""Very long string with some {variable}
-inside. Wow. Such string. Much long{2}"""</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Very long string with some </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span>
+<span class="s2">inside. Wow. Such string. Much long</span><span class="si">{</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
 </li>
 </ul>
             

@@ -125,30 +125,35 @@ If you want to run your machine in a headless mode, it is very conve" />
 <ol>
 <li>
 <p>Download the package (or see the instructions <a href="http://deb.anydesk.com/howto.html">here</a>):</p>
-<pre class="highlight"><code class="language-bash">sudo apt update
-sudo apt full-upgrade
-wget https://download.anydesk.com/rpi/anydesk_6.1.1-1_armhf.deb</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>full-upgrade
+wget<span class="w"> </span>https://download.anydesk.com/rpi/anydesk_6.1.1-1_armhf.deb
+</code></pre></div>
 </li>
 <li>
 <p>Install anydesk</p>
-<pre class="highlight"><code class="language-bash">sudo dpkg -i anydesk_6.1.1-1_armhf.deb
-sudo apt-get install -f</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>anydesk_6.1.1-1_armhf.deb
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-f
+</code></pre></div>
 <p>You will probably need these dependencies:</p>
-<pre class="highlight"><code class="language-bash">sudo apt install libminizip1 libegl1-mesa</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libminizip1<span class="w"> </span>libegl1-mesa
+</code></pre></div>
 </li>
 <li>
 <p>Fix the absense of the physical screen (<code>display_server_not_supported</code> error):</p>
 <p>Run in the terminal:</p>
-<pre class="highlight"><code class="language-bash">sudo nano /boot/config.txt</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/boot/config.txt
+</code></pre></div>
 <p>And uncomment the <code>hdmi_force_hotplug=1</code> line:</p>
 <p><img alt="" src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_14.22.36.png" /></p>
 <p><br/></p>
 </li>
 <li>
 <p>Check everything:</p>
-<pre class="highlight"><code class="language-bash">anydesk
-anydesk --get-id
-anydesk --version</code></pre>
+<div class="highlight"><pre><span></span><code>anydesk
+anydesk<span class="w"> </span>--get-id
+anydesk<span class="w"> </span>--version
+</code></pre></div>
 <p><img alt="" src="https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_14.45.33.png" /></p>
 <p>Here is the <a href="https://support.anydesk.com/knowledge/command-line-interface-for-linux#installation-commands">link</a> to the command line commands for AnyDesk. The most important one is setting password for the access. You will probably need to reboot Raspberry Pi.</p>
 <p>Congratulations! Now you anydesk server will run after reboot and you will be able to connect to it and transfer files remote control even over the internet (not in the local network).</p>
@@ -156,7 +161,8 @@ anydesk --version</code></pre>
 </ol>
 <h1>Back up your google drive cloud storage to local HDD daily.</h1>
 <p><a href="https://rclone.org/drive/">rclone</a> utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using <a href="https://crontab.guru">crontab</a>.</p>
-<pre class="highlight"><code class="language-bash">sudo crontab -e</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>crontab<span class="w"> </span>-e
+</code></pre></div>
 <p>![0 6 * <em> * /sbin/shutdown -r now
 0 3 * </em> * sh ~/backup_from_drive.sh</p>
 <p>It means, that Raspberry Pi reboots each morning at 6:00; and backs up each night at 3:00.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.24.11.png)</p>
@@ -164,9 +170,10 @@ anydesk --version</code></pre>
 <p>Backup script could include several folders, cloud providers or some logging utilities.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.23.18.png)</p>
 <h1>Install Docker</h1>
 <p><a href="https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script">Now</a> it’s super easy 😀:</p>
-<pre class="highlight"><code class="language-bash">curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-pip install docker compose</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+sudo<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+pip<span class="w"> </span>install<span class="w"> </span>docker<span class="w"> </span>compose
+</code></pre></div>
 <p><br/></p>
             
             
