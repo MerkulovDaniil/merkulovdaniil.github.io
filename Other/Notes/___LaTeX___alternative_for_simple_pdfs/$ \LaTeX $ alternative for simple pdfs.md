@@ -41,9 +41,7 @@ To obtain this result you’ll need to do these steps:
 	1. Open VSCode and press `cmd + shift + p`. 
 	1. Run `Markdown Preview Enhanced: Customize Css` command.
 
-		<p><div class="res_emb_block">
-<iframe width="640" height="480" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/61f2b634-c39f-404e-922f-fcf10bc9a172/Untitled.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230126T103551Z&X-Amz-Expires=3600&X-Amz-Signature=d31014838addbe9b1182ecc20c4aee8cc4c8cecb37ad9bd8f9c2d573be8b1b81&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
-</div></p>
+		<p><video playsinline autoplay muted loop controls src="https://merkulov.top/Other/Notes/___LaTeX___alternative_for_simple_pdfs/Untitled.webm"></video></p>
 
 	1. Configure `style.less` file.
 
