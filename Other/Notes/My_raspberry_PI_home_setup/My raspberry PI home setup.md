@@ -68,31 +68,31 @@ That’s an awesome way to connect to your Raspberry Pi via internet without any
 
 	Congratulations! Now you anydesk server will run after reboot and you will be able to connect to it and transfer files\ remote control even over the internet (not in the local network).
 
-	# Back up your google drive cloud storage to local HDD daily.
+# Back up your google drive cloud storage to local HDD daily.
 
-	[rclone](https://rclone.org/drive/) utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using [crontab](https://crontab.guru).
+[rclone](https://rclone.org/drive/) utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using [crontab](https://crontab.guru).
 
-	```bash
-	sudo crontab -e
-	```
+```bash
+sudo crontab -e
+```
 
-	![0 6 * * * /sbin/shutdown -r now
+![0 6 * * * /sbin/shutdown -r now
 0 3 * * * sh ~/backup_from_drive.sh
 
 It means, that Raspberry Pi reboots each morning at 6:00; and backs up each night at 3:00.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.24.11.png)
 
-	![rclone sync remote_macbook: /media/pi/HDD/Backups/drive_macbook -P
+![rclone sync remote_macbook: /media/pi/HDD/Backups/drive_macbook -P
 
 Backup script could include several folders, cloud providers or some logging utilities.](https://merkulov.top/Other/Notes/My_raspberry_PI_home_setup/Screenshot_2022-05-29_at_16.23.18.png)
 
-	# Install Docker
+# Install Docker
 
-	[Now](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script) it’s super easy 😀:
+[Now](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script) it’s super easy 😀:
 
-	```bash
-	curl -fsSL https://get.docker.com -o get-docker.sh
-	sudo sh get-docker.sh
-	pip install docker compose
-	```
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+pip install docker compose
+```
 
-	<br/>
+<br/>

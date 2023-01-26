@@ -41,7 +41,7 @@ emoji: 💈
 
 	```python
 	multi_line_string = (f"Very long string with some {variable}\n",
-											 f"inside. Wow. Such string. Much long{2}")
+		f"inside. Wow. Such string. Much long{2}")
 	```
 
 	👎 NO:
