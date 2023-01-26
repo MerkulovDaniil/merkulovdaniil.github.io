@@ -247,7 +247,7 @@ Date: 24 Aug, 2021 - 02 Sep, 2021
 Ну и для самых терпеливых предлагается потерпеть еще 10 минут, которые выражают вышеизложенный пост в форме видео:
 
 <p><div class="res_emb_block">
-    <iframe width="640" height="480" src="https://www.youtube.com/embed/vuSFnJVbUks" frameborder="0" allowfullscreen></iframe>
-    </div></p>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/vuSFnJVbUks" frameborder="0" allowfullscreen></iframe>
+</div></p>
 
  
