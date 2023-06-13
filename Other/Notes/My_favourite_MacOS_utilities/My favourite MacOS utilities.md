@@ -22,4 +22,15 @@ emoji: 🍎
 	defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES
 	```
 
-<br/>
+* Quick actions to turn SVG to PDF and PDF to SVG:
+
+	These 2 files should be placed in `/Users/username/Library/Services`
+
+	[📎 quick_actions.zip](https://merkulov.top/Other/Notes/My_favourite_MacOS_utilities/quick_actions.zip)
+
+	Before using one needs to install convertors:
+
+	```bash
+	brew install pdf2svg
+	brew install librsvg
+	```
