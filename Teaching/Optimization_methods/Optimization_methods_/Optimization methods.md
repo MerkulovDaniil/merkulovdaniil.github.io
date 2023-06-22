@@ -9,6 +9,6 @@ Role: Course author
 ---
 
 This is the course for online Master program “Modern state of Artificial Intelligence” at MIPT.
-Materials: [msai22.fmin.xyz](http://msai22.fmin.xyz)
+Materials: [msai22.fmin.xyz](http://msai22.fmin.xyz/)
 
 <br/>

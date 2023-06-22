@@ -35,7 +35,7 @@ $$
 
 To obtain this result you’ll need to do these steps:
 
-1. Install **[VSCode](https://code.visualstudio.com)**.
+1. Install **[VSCode](https://code.visualstudio.com/)**.
 1. Install **[Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/?id=markdown-preview-enhanced)**** extension.**
 1. (Optional) Configure your own style.
 	1. Open VSCode and press `cmd + shift + p`. 

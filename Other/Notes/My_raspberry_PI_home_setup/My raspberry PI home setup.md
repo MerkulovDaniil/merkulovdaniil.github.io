@@ -70,7 +70,7 @@ That’s an awesome way to connect to your Raspberry Pi via internet without any
 
 # Back up your google drive cloud storage to local HDD daily.
 
-[rclone](https://rclone.org/drive/) utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using [crontab](https://crontab.guru).
+[rclone](https://rclone.org/drive/) utility is a great way to deal with this task. All instructions worked like a charm. Scheduling is done using [crontab](https://crontab.guru/).
 
 ```bash
 sudo crontab -e
