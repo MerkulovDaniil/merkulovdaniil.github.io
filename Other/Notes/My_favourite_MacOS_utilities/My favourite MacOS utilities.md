@@ -22,6 +22,7 @@ emoji: 🍎
 	defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES
 	```
 
+* <a href="https://github.com/sorinipate/vpn-up-for-openconnect" target="_blank"> <i class="fa fa-lg fa-github"> </i> vpn-up-for-openconnect </a> - VPN client, that allows you to run VPN connection from Terminal in a single command.
 * Quick actions to turn SVG to PDF and PDF to SVG:
 
 	These 2 files should be placed in `/Users/username/Library/Services`
