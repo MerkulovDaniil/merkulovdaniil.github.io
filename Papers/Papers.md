@@ -8,7 +8,7 @@ emoji: 📜
 [🏗️ On accelerated methods for tensor canonical polyadic
 decomposition](https://merkulov.top/Papers/On_accelerated_methods_for_tensor_canonical_polyadicdecomposition)
 
-[🌊 NAG-GS: Semi-Implicit, Accelerated and Robust Stochastic Optimizers](NAG-GS:_Semi-Implicit,_Accelerated_and_Robust_Stochastic_Optimizers)
+[🌊 NAG-GS. Semi-Implicit, Accelerated and Robust Stochastic Optimizers](https://merkulov.top/Papers/NAG-GS._Semi-Implicit,_Accelerated_and_Robust_Stochastic_Optimizers)
 
 [⏩ Fast Line Search for Multi-Task Learning.](https://merkulov.top/Papers/Fast_Line_Search_for_Multi-Task_Learning.)
 

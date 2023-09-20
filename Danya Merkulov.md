@@ -1,7 +1,7 @@
 ---
 title: Danya Merkulov
-cover: https://merkulov.top/photo_2023-09-20_19.41.49.jpeg
-icon: https://merkulov.top/photo_2023-09-20_19.36.00.jpeg
+cover: https://merkulov.top/pisa.jpeg
+icon: https://merkulov.top/dm_base.jpeg
 emoji: None
 ---
 
@@ -14,11 +14,5 @@ I am Junior Researcher at Skolkovo Institute of Science and Technology and Assis
 [🏕️ Travel](https://merkulov.top/Travel)
 
 [🤔 Other](https://merkulov.top/Other)
-
-<br/>
-
-<br/>
-
-[💎 My telegram channel](http://t.me/@fminxyz)
 
 <br/>
