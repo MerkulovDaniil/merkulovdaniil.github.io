@@ -5,6 +5,8 @@ icon: None
 emoji: 📜
 ---
 
+[⤵️ Another approach to build Lyapunov functions for the first order methods in the quadratic case](https://merkulov.top/Papers/Another_approach_to_build_Lyapunov_functions_for_the_first_order_methods_in_the_quadratic_case)
+
 [🏗️ On accelerated methods for tensor canonical polyadic
 decomposition](https://merkulov.top/Papers/On_accelerated_methods_for_tensor_canonical_polyadicdecomposition)
 

@@ -26,3 +26,5 @@ emoji: 📜
 Математика информационного века. Н. Литвак, А. Райгородский
 
 [📎 MathInformAge.pdf](https://merkulov.top/Other/Notes/Best_applied_math_materials/MathInformAge.pdf)
+
+<br/>
