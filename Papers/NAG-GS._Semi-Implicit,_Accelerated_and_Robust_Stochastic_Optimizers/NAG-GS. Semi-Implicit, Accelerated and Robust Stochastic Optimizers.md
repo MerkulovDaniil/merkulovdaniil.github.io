@@ -9,7 +9,7 @@ Code: [🕸](https://github.com/skolai/nag-gs)
 ---
 
 <p><div class="res_emb_block">
-<iframe width="640" height="480" src="https://prod-files-secure.s3.us-west-2.amazonaws.com/d6f919a8-0464-48b7-878c-b727c4ef9c6f/ce4f6819-75dd-4337-9385-6d9531081b41/naggs_vis.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240605%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240605T202034Z&X-Amz-Expires=3600&X-Amz-Signature=ffad40867fdc19336590eba8493383941be0bc65d34f9ba829d37d1258402ee0&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://prod-files-secure.s3.us-west-2.amazonaws.com/d6f919a8-0464-48b7-878c-b727c4ef9c6f/ce4f6819-75dd-4337-9385-6d9531081b41/naggs_vis.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240606%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240606T082346Z&X-Amz-Expires=3600&X-Amz-Signature=2ac9a394aa83f6964a698cea1ead4b2caea1daa82e7b7e1666f49ced378407fe&X-Amz-SignedHeaders=host&x-id=GetObject" frameborder="0" allowfullscreen></iframe>
 </div></p>
 
 In this paper we propose a novel, robust and accelerated stochastic optimizer that relies on two key elements: (1) an accelerated Nesterov-like Stochastic Differential Equation (SDE) and (2) its semi-implicit Gauss-Seidel type discretization.
