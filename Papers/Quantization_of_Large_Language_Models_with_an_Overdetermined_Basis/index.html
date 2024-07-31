@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Quantization of Large Language Models with an Overdetermined Basis" />
+  <meta property="og:image" content=" https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis/kq.png " />
+  <meta property="og:description" content="In this paper, we introduce an algorithm for data quantization based on the principles of Kashin representation. This approach hinges on decomposing a" />
+  <meta property='og:site_name' content="Danya Merkulov" />
+  <meta property="og:url" content="https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis" />
+  <link rel="stylesheet" href="https://merkulov.top/css/main.css">
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/74cb2acb7c.js" crossorigin="anonymous"></script>
+  <!-- Mathjax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+  
+  
+  
+  <title>Quantization of Large Language Models with an Overdetermined Basis</title>
+  
+  
+</head>
+  <body>
+    
+<nav class="path-header">
+  <ul class="header-nav">
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top"><span class="miniicon">  <img src="https://merkulov.top/dm_base.jpeg">  </span> Danya Merkulov </a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Papers">📜 Papers</a></li>
+      
+    
+
+    
+    <li class="header-title-block">Quantization of Large Language Models with an Overdetermined Basis</li>
+    
+  </ul>
+</nav>
+
+
+<header>
+  
+  <div class="cover">
+     <img id="page-cover" src="https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis/kq.png">
+  </div>
+  
+  
+  
+  
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="page">
+          <header class="page-header">
+          
+            
+            <div class="page-title" >Quantization of Large Language Models with an Overdetermined Basis</div>
+            
+            
+            <p class="page-meta">
+              <time class="dt-published" datetime="31 Jul, 2024" itemprop="datePublished">
+                
+                Last edited: 31 Jul, 2024
+                
+              </time>
+            </p>
+            
+            
+            
+            
+            <table class="properties_table">
+    
+    
+    
+    
+    
+    <tr>
+        <td width=25%><i class="fas fa-link"></i> Paper</td>
+        <td id="Paper"> <a href="https://openreview.net/forum?id=40rikZ1pCm"> 🕸 </a></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td width=25%><i class="fas fa-link"></i> Code</td>
+        <td id="Code"> <a href="https://github.com/MerkulovDaniil/kquantize"> 🕸 </a></td>
+    </tr>
+    
+    
+    
+</table>
+            
+            
+            
+          
+          </header>
+          <div class="page-content">
+            
+            
+            <p>In this paper, we introduce an algorithm for data quantization based on the principles of Kashin representation. This approach hinges on decomposing any given vector, matrix, or tensor into two factors. The first factor maintains a small infinity norm, while the second exhibits a similarly constrained norm when multiplied by an orthogonal matrix. Surprisingly, the entries of factors after decomposition are well-concentrated around several peaks, which allows us to efficiently replace them with corresponding centroids for quantization purposes. We study the theoretical properties of the proposed approach and rigorously evaluate our compression algorithm in the context of next-word prediction tasks, employing models like OPT of varying sizes. Our findings demonstrate that Kashin Quantization achieves competitive quality in model performance while ensuring superior data compression, marking a significant advancement in the field of data quantization.</p>
+            
+            
+          </div>
+        </article>
+      </div>
+    </main>
+    
+    
+    <footer>
+    <ul>
+        <li> <a href="https://merkulov.top/Archive/index.html"> 🏛 Archive</a> </li>
+        <li> <a class="fa fa-lg fa-telegram" href="https://t.me/fminxyz" target="_blank"></a> </li>
+        <li> <a class="fa fa-lg fa-github" href="https://github.com/MerkulovDaniil" target="_blank"> </a> </li> 
+    </ul>
+</footer>
+    
+    
+  </body>
+</html>
