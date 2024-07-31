@@ -5,7 +5,7 @@ icon: None
 emoji: 📜
 ---
 
-[Quantization of Large Language Models with an Overdetermined Basis](https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis)
+[➕ Quantization of Large Language Models with an Overdetermined Basis](https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis)
 
 [⤵️ Another approach to build Lyapunov functions for the first order methods in the quadratic case](https://merkulov.top/Papers/Another_approach_to_build_Lyapunov_functions_for_the_first_order_methods_in_the_quadratic_case)
 

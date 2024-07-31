@@ -2,7 +2,7 @@
 title: Quantization of Large Language Models with an Overdetermined Basis
 cover: https://merkulov.top/Papers/Quantization_of_Large_Language_Models_with_an_Overdetermined_Basis/kq.png
 icon: None
-emoji: None
+emoji: ➕
 Video: 
 Paper: [🕸](https://openreview.net/forum?id=40rikZ1pCm)
 Code: [🕸](https://github.com/MerkulovDaniil/kquantize)
