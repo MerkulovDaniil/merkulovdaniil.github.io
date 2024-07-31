@@ -1,6 +1,6 @@
 ---
 title: Danya Merkulov
-cover: https://merkulov.top/pisa.jpeg
+cover: https://merkulov.top/white_night.jpg
 icon: https://merkulov.top/dm_base.jpeg
 emoji: None
 ---
