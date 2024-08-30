@@ -57,9 +57,9 @@ emoji: 📢
 
 [🧠 Simple Annotated MNIST Exercise](https://merkulov.top/Teaching/Talks/Simple_Annotated_MNIST_Exercise)
 
-[📡 Clustering: k-means, DBScan, Community detection](Clustering:_k-means,_DBScan,_Community_detection)
+[📡 Clustering: k-means, DBScan, Community detection](https://merkulov.top/Teaching/Talks/Clustering__k-means,_DBScan,_Community_detection)
 
-[📦 Dimensionality reduction: PCA, t-SNE, UMAP](https://merkulov.top/Teaching/Talks/Dimensionality_reduction:_PCA,_t-SNE,_UMAP)
+[📦 Dimensionality reduction: PCA, t-SNE, UMAP](https://merkulov.top/Teaching/Talks/Dimensionality_reduction__PCA,_t-SNE,_UMAP)
 
 [🖼️ Введение в параллелизм. GPU training. MultiGPU training with Accelerate.](https://merkulov.top/Teaching/Talks/Введение_в_параллелизм._GPU_training._MultiGPU_training_with_Accelerate.)
 
@@ -81,9 +81,9 @@ emoji: 📢
 
 [🧠 Вебинар по нейронным сетям для лидеров цифровых команд](https://merkulov.top/Teaching/Talks/Вебинар_по_нейронным_сетям_для_лидеров_цифровых_команд)
 
-[🧠 Нейронные сети: принципы работы, разбор кейсов, недавние достижения.](https://merkulov.top/Teaching/Talks/Нейронные_сети:_принципы_работы,_разбор_кейсов,_недавние_достижения.)
+[🧠 Нейронные сети: принципы работы, разбор кейсов, недавние достижения.](https://merkulov.top/Teaching/Talks/Нейронные_сети__принципы_работы,_разбор_кейсов,_недавние_достижения.)
 
-[🧠 Нейронные сети: принципы работы, разбор кейсов, недавние достижения.](https://merkulov.top/Teaching/Talks/Нейронные_сети:_принципы_работы,_разбор_кейсов,_недавние_достижения._)
+[🧠 Нейронные сети: принципы работы, разбор кейсов, недавние достижения.](https://merkulov.top/Teaching/Talks/Нейронные_сети__принципы_работы,_разбор_кейсов,_недавние_достижения._)
 
 [🧠 Нейронные сети. Принципы работы и приложения для магистров МФТИ.](https://merkulov.top/Teaching/Talks/Нейронные_сети._Принципы_работы_и_приложения_для_магистров_МФТИ.)
 

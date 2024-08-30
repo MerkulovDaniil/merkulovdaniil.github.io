@@ -7,8 +7,6 @@ emoji: 📦
 
 [🏊‍♂️ Сертификат X-Waters](https://merkulov.top/Other/Wishlist/Сертификат_X-Waters)
 
-[🎮 Nintendo Switch OLED прошитый](https://merkulov.top/Other/Wishlist/Nintendo_Switch_OLED_прошитый)
-
 [🎮 Steam deck OLED](https://merkulov.top/Other/Wishlist/Steam_deck_OLED)
 
 [👞 Сертификат в ECCO](https://merkulov.top/Other/Wishlist/Сертификат_в_ECCO)
