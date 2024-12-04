@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="My favourite terminal commands" />
+  <meta property="og:image" content=" https://merkulov.top/white_night.jpg " />
+  <meta property="og:description" content="" />
+  <meta property='og:site_name' content="Danya Merkulov" />
+  <meta property="og:url" content="https://merkulov.top/Other/Notes/My_favourite_terminal_commands" />
+  <link rel="stylesheet" href="https://merkulov.top/css/main.css">
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/74cb2acb7c.js" crossorigin="anonymous"></script>
+  <!-- Mathjax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📟</text></svg>">
+  
+  
+  
+  <title>My favourite terminal commands</title>
+  
+  
+</head>
+  <body>
+    
+<nav class="path-header">
+  <ul class="header-nav">
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top"><span class="miniicon">  <img src="https://merkulov.top/dm_base.jpeg">  </span> Danya Merkulov </a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other">🤔 Other</a></li>
+      
+    
+    
+      
+      <li class="header-title-block"><a href="https://merkulov.top/Other/Notes">🎶 Notes</a></li>
+      
+    
+
+    
+    <li class="header-title-block">📟 My favourite terminal commands</li>
+    
+  </ul>
+</nav>
+
+
+<header>
+  
+  <div class="cover">
+    
+  </div>
+  
+  
+  
+  <div class="icon">
+    📟
+  </div>
+  
+  
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="page">
+          <header class="page-header">
+          
+            
+            <div class="page-title" >My favourite terminal commands</div>
+            
+            
+            <p class="page-meta">
+              <time class="dt-published" datetime="04 Dec, 2024" itemprop="datePublished">
+                
+                Last edited: 04 Dec, 2024
+                
+              </time>
+            </p>
+            
+            
+            
+            
+          
+          </header>
+          <div class="page-content">
+            
+            
+            <p>Most of them are actually generated with ChatGPT, but It is nice to have it in one place without need to prompt-engineer it each time.</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>--no-parent<span class="w"> </span>--mirror<span class="w"> </span>--convert-links<span class="w"> </span>--adjust-extension<span class="w"> </span>--page-requisites<span class="w"> </span>--no-clobber<span class="w"> </span>--cut-dirs<span class="o">=</span><span class="m">1</span><span class="w"> </span>--directory-prefix<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/Downloads&quot;</span><span class="w"> </span>&lt;URL&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nv">input_file</span><span class="o">=</span><span class="s2">&quot;FILENAME.mkv&quot;</span><span class="p">;</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span>-ss<span class="w"> </span><span class="m">00</span>:01:12<span class="w"> </span>-to<span class="w"> </span><span class="m">00</span>:54:13<span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span>-ss<span class="w"> </span><span class="m">01</span>:02:19<span class="w"> </span>-to<span class="w"> </span><span class="m">02</span>:01:29<span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;file &#39;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&#39;\nfile &#39;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&#39;\n&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-f<span class="w"> </span>concat<span class="w"> </span>-safe<span class="w"> </span><span class="m">0</span><span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span><span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/FILENAME.mp4&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span>
+</code></pre></div>
+            
+            
+          </div>
+        </article>
+      </div>
+    </main>
+    
+    
+    <footer>
+    <ul>
+        <li> <a href="https://merkulov.top/Archive/index.html"> 🏛 Archive</a> </li>
+        <li> <a class="fa fa-lg fa-telegram" href="https://t.me/fminxyz" target="_blank"></a> </li>
+        <li> <a class="fa fa-lg fa-github" href="https://github.com/MerkulovDaniil" target="_blank"> </a> </li> 
+    </ul>
+</footer>
+    
+    
+  </body>
+</html>
