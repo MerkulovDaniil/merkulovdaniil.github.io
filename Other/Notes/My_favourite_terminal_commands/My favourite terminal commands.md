@@ -8,7 +8,7 @@ emoji: 📟
 Most of them are actually generated with ChatGPT, but It is nice to have it in one place without need to prompt-engineer it each time.
 
 ```bash
-wget --no-parent --mirror --convert-links --adjust-extension --page-requisites --no-clobber --cut-dirs=1 --directory-prefix="$HOME/Downloads" <URL>
+wget -r -l 1 -A "*.html,*.pdf" -e robots=off -nv URL && wget -P ./$(basename $(dirname URL)) $(wget -qO- URL | grep -o 'https://www.dropbox.com/s/[a-zA-Z0-9_/-]*\.pdf' | sed 's/\?dl=0$//')
 ```
 
 ```bash
