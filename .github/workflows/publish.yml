@@ -1,9 +1,9 @@
 name: Deploy from Notion to Pages
 
-# on: [workflow_dispatch]
-on:
-  schedule:
-    - cron: "0 8,20 * * *" 
+on: [workflow_dispatch]
+# on:
+#   schedule:
+#     - cron: "0 8,20 * * *" 
     
 jobs:
   download_old-generate-push:
