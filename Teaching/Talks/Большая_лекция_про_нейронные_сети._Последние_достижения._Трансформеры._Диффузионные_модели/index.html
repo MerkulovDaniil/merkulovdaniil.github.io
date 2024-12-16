@@ -62,6 +62,8 @@
     <li class="header-title-block">🧟 Большая лекция про нейронные сети. Последние достижения. Трансформеры. Диффузионные модели</li>
     
   </ul>
+
+  
 </nav>
 
 
@@ -149,6 +151,46 @@
     </ul>
 </footer>
     
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add copy buttons to all code blocks
+      document.querySelectorAll('pre > code').forEach(function(codeBlock) {
+        // Create button
+        var button = document.createElement('button');
+        button.className = 'copy-button';
+        button.textContent = 'Copy';
+        
+        // Add button to pre element (parent of code block)
+        codeBlock.parentNode.appendChild(button);
+        
+        // Add click handler
+        button.addEventListener('click', function() {
+          // Copy code
+          var code = codeBlock.textContent;
+          navigator.clipboard.writeText(code).then(function() {
+            // Success feedback
+            button.textContent = 'Copied!';
+            button.classList.add('success');
+            
+            // Reset after 2 seconds
+            setTimeout(function() {
+              button.textContent = 'Copy';
+              button.classList.remove('success');
+            }, 2000);
+          }).catch(function(err) {
+            console.error('Failed to copy:', err);
+            button.textContent = 'Error';
+            
+            // Reset after 2 seconds
+            setTimeout(function() {
+              button.textContent = 'Copy';
+            }, 2000);
+          });
+        });
+      });
+    });
+    </script>
     
   </body>
 </html>
