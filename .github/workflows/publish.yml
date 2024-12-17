@@ -1,6 +1,6 @@
 name: Deploy from Notion to Pages
 
-# on: [workflow_dispatch]
+on: [workflow_dispatch]
 on:
   schedule:
     - cron: "0 8,20 * * *" 
