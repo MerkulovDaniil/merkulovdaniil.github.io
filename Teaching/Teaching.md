@@ -9,6 +9,8 @@ emoji: 👨‍🏫
 
 [🚂 Numerical Linear Algebra](https://merkulov.top/Teaching/Numerical_Linear_Algebra)
 
+<br/>
+
 [📢 Talks](https://merkulov.top/Teaching/Talks)
 
 <br/>

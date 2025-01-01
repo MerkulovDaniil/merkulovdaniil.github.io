@@ -5,6 +5,8 @@ icon: None
 emoji: 🎢
 ---
 
+[🗜️ Прикладная математика для анализа данных: оптимизация, матрицы, тензоры.](https://merkulov.top/Teaching/Optimization_methods/Прикладная_математика_для_анализа_данных__оптимизация,_матрицы,_тензоры.)
+
 [🐊 Optimization for ML](https://merkulov.top/Teaching/Optimization_methods/Optimization_for_ML)
 
 [🚀 Optimization methods](https://merkulov.top/Teaching/Optimization_methods/Optimization_methods)
