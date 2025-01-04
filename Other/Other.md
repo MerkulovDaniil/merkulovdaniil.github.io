@@ -13,4 +13,6 @@ emoji: 🤔
 
 [🎶 Notes](https://merkulov.top/Other/Notes)
 
+[🔮 Итоги года](https://merkulov.top/Other/Итоги_года)
+
 <br/>
