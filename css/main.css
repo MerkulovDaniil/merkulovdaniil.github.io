@@ -625,9 +625,11 @@ pre:hover .copy-button {
       font-size: 2.5rem; } }
 .page-content {
   margin-bottom: 30px; }
-  .page-content h1, .page-content h2, .page-content h3 {
+  .page-content h1 {
     margin-top: 60px; }
-  .page-content h4, .page-content h5, .page-content h6 {
+  .page-content h2 {
+    margin-top: 37.5px; }
+  .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
     margin-top: 30px; }
   .page-content h2 {
     font-size: 1.75rem; }
