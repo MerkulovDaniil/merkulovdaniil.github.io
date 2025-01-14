@@ -5,6 +5,8 @@ icon: None
 emoji: 🏕️
 ---
 
+[🗼 Вышки в Электростали](https://merkulov.top/Travel/Вышки_в_Электростали)
+
 [1️⃣ ВЕЛО1](https://merkulov.top/Travel/ВЕЛО1)
 
 [🗻 Montenegro](https://merkulov.top/Travel/Montenegro)
