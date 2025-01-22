@@ -5,6 +5,8 @@ icon: None
 emoji: 📦
 ---
 
+[🌿 Хороший калебас для мате](https://merkulov.top/Other/Wishlist/Хороший_калебас_для_мате)
+
 [🏊‍♂️ Сертификат X-Waters](https://merkulov.top/Other/Wishlist/Сертификат_X-Waters)
 
 [🎮 Steam deck OLED](https://merkulov.top/Other/Wishlist/Steam_deck_OLED)
