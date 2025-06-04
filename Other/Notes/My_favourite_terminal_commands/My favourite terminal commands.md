@@ -32,3 +32,11 @@ input_file="FILENAME.mkv"; dir=$(dirname "$input_file"); ffmpeg -i "$input_file"
 ```bash
 input_file='/Movies/2025-01-13 11-32-33.mkv'; dir=$(dirname "$input_file"); ffmpeg -i "$input_file" -ss 00:00:11 -to 01:03:30 -map 0 -c copy "$dir/hse1.mp4"
 ```
+
+<figcaption>When OBS for some reason puts two audio tracks (external mic and camera) in a track 1 and camera mic on track 2, but you only need an external mic sound. We subtract one audio from another + usual trimming as it was above.</figcaption>
+```bash
+input_file='/Movies/2025-06-02 11-14-34.mkv'; dir=$(dirname "$input_file"); \
+ffmpeg -ss 00:00:26 -to 01:07:57 -i "$input_file" \
+-filter_complex "[0:a:1]volume=-1,apad[a2inv];[0:a:0][a2inv]amix=inputs=2:duration=first:normalize=0[outa]" \
+-map 0:v -map "[outa]" -c:v copy -c:a aac -movflags +faststart "$dir/hse19.mp4"
+```
