@@ -4,7 +4,7 @@ cover: None
 icon: None
 emoji: 🧠
 Place: Сберуниверситет
-Date: 11 Nov, 2024
+Date: 30 Sep, 2024
 Code: 
 Presentation: 
 ---
