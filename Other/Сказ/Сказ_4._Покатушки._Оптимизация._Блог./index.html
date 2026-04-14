@@ -174,8 +174,8 @@
 </blockquote>
 <p>Тут - то я подумал, что это вполне себе годное направление. Внезапно, я понял, что решать задачи на семинаре всегда эффективнее было руками. Если ты показываешь решение поэтапно на одном слайде частями - это тоже ок, но требует больше усилий. В результате, я решил, что в этом году решаю задачки стилусом на планшете.</p>
 <p>В итоге, основную часть работы выполняет следующий скрипт:</p>
-<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">create_collection</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">title</span> <span class="s2">&quot;Matrix calculus&quot;</span> <span class="o">-</span><span class="n">chapters</span> <span class="s2">&quot;Matrix calculus&quot;</span><span class="p">,</span> <span class="s2">&quot;#ex#Matrix calculus#1,2,5,6&quot;</span>
-</code></pre></div>
+<p><code>python
+python create_collection.py -title "Matrix calculus" -chapters "Matrix calculus", "#ex#Matrix calculus#1,2,5,6"</code></p>
 <p>Он</p>
 <ul>
 <li>создает большой маркдаун файл (легче всего стэкать и форматировать, чем латех, но pandoc умеет конвертить это в $ \LaTeX $) </li>
@@ -260,25 +260,29 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -286,8 +290,6 @@
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

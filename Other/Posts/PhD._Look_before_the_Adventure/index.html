@@ -194,7 +194,10 @@
 <li>I will take philosophy course by Ivan Lupandin and innovation course by Kelvin Willoughby.</li>
 <li>There could be useful to take English course (3 ECTS) in order to obtain Russian state degree.</li>
 <li>I will try to participate in summer internships during the first years of my PhD program. And the end of the year - exact application time of many summer programs. The deadlines are coming!</li>
-<li>Choosing thesis topic at the first year of study seems the most challenging step to do for me.</li>
+<li>
+<p>Choosing thesis topic at the first year of study seems the most challenging step to do for me.</p>
+<p><br/></p>
+</li>
 </ul>
 <p>I would like to read this post after my graduation and reflect it in some way. And finally, this is my favorite picture from <a href="http://phdcomics.com/">this</a> series:</p>
 <p><img alt="" src="https://merkulov.top/Other/Posts/PhD._Look_before_the_Adventure/phd_saturdays.jpg" /></p>
@@ -218,25 +221,29 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -244,8 +251,6 @@
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

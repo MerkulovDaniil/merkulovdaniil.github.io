@@ -121,7 +121,7 @@ Right in the current term (Nov - Dec, 17) I assist my scientific advisor prof. O
 * I will try to participate in summer internships during the first years of my PhD program. And the end of the year - exact application time of many summer programs. The deadlines are coming!
 * Choosing thesis topic at the first year of study seems the most challenging step to do for me.
 
-	
+	<br/>
 
 I would like to read this post after my graduation and reflect it in some way. And finally, this is my favorite picture from [this](http://phdcomics.com/) series:
 

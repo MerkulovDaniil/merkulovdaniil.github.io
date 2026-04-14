@@ -125,8 +125,8 @@
 <li><a href="https://www.vectornator.io/">Vectornator</a> - vector graphic editor.</li>
 <li>
 <p>Safari - place cursor in the search field with new tab opening by <code>cmd + T</code>:</p>
-<div class="highlight"><pre><span></span><code>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.Safari<span class="w"> </span>UniversalSearchFeatureNotificationHasBeenDisplayed<span class="w"> </span>YES
-</code></pre></div>
+<p><code>bash
+defaults write com.apple.Safari UniversalSearchFeatureNotificationHasBeenDisplayed YES</code></p>
 </li>
 </ul>
 <ul>
@@ -136,9 +136,9 @@
 <p>These 2 files should be placed in <code>/Users/username/Library/Services</code></p>
 <p><a href="https://merkulov.top/Other/Notes/My_favourite_MacOS_utilities/quick_actions.zip">📎 quick_actions.zip</a></p>
 <p>Before using one needs to install convertors:</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>pdf2svg
-brew<span class="w"> </span>install<span class="w"> </span>librsvg
-</code></pre></div>
+<p><code>bash
+brew install pdf2svg
+brew install librsvg</code></p>
 </li>
 </ul>
             
@@ -161,25 +161,29 @@ brew<span class="w"> </span>install<span class="w"> </span>librsvg
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -187,8 +191,6 @@ brew<span class="w"> </span>install<span class="w"> </span>librsvg
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

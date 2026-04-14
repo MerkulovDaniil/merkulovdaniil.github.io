@@ -115,26 +115,26 @@
             <p>Most of them are actually generated with ChatGPT, but It is nice to have it in one place without need to prompt-engineer it each time.</p>
 <h1>Web</h1>
 <figcaption>Recursively downloads all files from the URL to the Downloads subfolder, also downloads the dropbox pdfs</figcaption>
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-r<span class="w"> </span>-l<span class="w"> </span><span class="m">1</span><span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;*.html,*.pdf&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">robots</span><span class="o">=</span>off<span class="w"> </span>-nv<span class="w"> </span>URL<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>wget<span class="w"> </span>-P<span class="w"> </span>./<span class="k">$(</span>basename<span class="w"> </span><span class="k">$(</span>dirname<span class="w"> </span>URL<span class="k">))</span><span class="w"> </span><span class="k">$(</span>wget<span class="w"> </span>-qO-<span class="w"> </span>URL<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-o<span class="w"> </span><span class="s1">&#39;https://www.dropbox.com/s/[a-zA-Z0-9_/-]*\.pdf&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/\?dl=0$//&#39;</span><span class="k">)</span>
-</code></pre></div>
+<p><code>bash
+wget -r -l 1 -A "*.html,*.pdf" -e robots=off -nv URL &amp;&amp; wget -P ./$(basename $(dirname URL)) $(wget -qO- URL | grep -o 'https://www.dropbox.com/s/[a-zA-Z0-9_/-]*\.pdf' | sed 's/\?dl=0$//')</code></p>
 <figcaption>For some reason, my browser accidentally does not work, while the server performs ping. These 3 commands are the fix</figcaption>
-<div class="highlight"><pre><span></span><code>networksetup<span class="w"> </span>-setwebproxystate<span class="w"> </span>Wi-Fi<span class="w"> </span>off
-networksetup<span class="w"> </span>-setsecurewebproxystate<span class="w"> </span>Wi-Fi<span class="w"> </span>off
-networksetup<span class="w"> </span>-setsocksfirewallproxystate<span class="w"> </span>Wi-Fi<span class="w"> </span>off
-</code></pre></div>
+<p><code>bash
+networksetup -setwebproxystate Wi-Fi off
+networksetup -setsecurewebproxystate Wi-Fi off
+networksetup -setsocksfirewallproxystate Wi-Fi off</code></p>
 <h1>Video processing</h1>
 <figcaption>Trims the .mkv file produced by OBS recorder of the lecture containing 2 parts to mp4 file, preserving all the audio tracks</figcaption>
-<div class="highlight"><pre><span></span><code><span class="nv">input_file</span><span class="o">=</span><span class="s2">&quot;FILENAME.mkv&quot;</span><span class="p">;</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span>-ss<span class="w"> </span><span class="m">00</span>:01:12<span class="w"> </span>-to<span class="w"> </span><span class="m">00</span>:54:13<span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span>-ss<span class="w"> </span><span class="m">01</span>:02:19<span class="w"> </span>-to<span class="w"> </span><span class="m">02</span>:01:29<span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;file &#39;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&#39;\nfile &#39;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&#39;\n&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-f<span class="w"> </span>concat<span class="w"> </span>-safe<span class="w"> </span><span class="m">0</span><span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span><span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/FILENAME.mp4&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part1.mkv&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/part2.mkv&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/concat_list.txt&quot;</span>
-</code></pre></div>
+<p><code>bash
+input_file="FILENAME.mkv"; dir=$(dirname "$input_file"); ffmpeg -i "$input_file" -ss 00:01:12 -to 00:54:13 -map 0 -c copy "$dir/part1.mkv" &amp;&amp; ffmpeg -i "$input_file" -ss 01:02:19 -to 02:01:29 -map 0 -c copy "$dir/part2.mkv" &amp;&amp; printf "file '$dir/part1.mkv'\nfile '$dir/part2.mkv'\n" &gt; "$dir/concat_list.txt" &amp;&amp; ffmpeg -f concat -safe 0 -i "$dir/concat_list.txt" -map 0 -c copy "$dir/FILENAME.mp4" &amp;&amp; rm "$dir/part1.mkv" "$dir/part2.mkv" "$dir/concat_list.txt"</code></p>
 <figcaption>Just trims the .mkv from one timestamp to another timestamp and saves it as .mp4 file in the same directory</figcaption>
-<div class="highlight"><pre><span></span><code><span class="nv">input_file</span><span class="o">=</span><span class="s1">&#39;/Movies/2025-01-13 11-32-33.mkv&#39;</span><span class="p">;</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span>-ss<span class="w"> </span><span class="m">00</span>:00:11<span class="w"> </span>-to<span class="w"> </span><span class="m">01</span>:03:30<span class="w"> </span>-map<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/hse1.mp4&quot;</span>
-</code></pre></div>
+<p><code>bash
+input_file='/Movies/2025-01-13 11-32-33.mkv'; dir=$(dirname "$input_file"); ffmpeg -i "$input_file" -ss 00:00:11 -to 01:03:30 -map 0 -c copy "$dir/hse1.mp4"</code></p>
 <figcaption>When OBS for some reason puts two audio tracks (external mic and camera) in a track 1 and camera mic on track 2, but you only need an external mic sound. We subtract one audio from another + usual trimming as it was above.</figcaption>
-<div class="highlight"><pre><span></span><code><span class="nv">input_file</span><span class="o">=</span><span class="s1">&#39;/Movies/2025-06-02 11-14-34.mkv&#39;</span><span class="p">;</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-ffmpeg<span class="w"> </span>-ss<span class="w"> </span><span class="m">00</span>:00:26<span class="w"> </span>-to<span class="w"> </span><span class="m">01</span>:07:57<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
--filter_complex<span class="w"> </span><span class="s2">&quot;[0:a:1]volume=-1,apad[a2inv];[0:a:0][a2inv]amix=inputs=2:duration=first:normalize=0[outa]&quot;</span><span class="w"> </span><span class="se">\</span>
--map<span class="w"> </span><span class="m">0</span>:v<span class="w"> </span>-map<span class="w"> </span><span class="s2">&quot;[outa]&quot;</span><span class="w"> </span>-c:v<span class="w"> </span>copy<span class="w"> </span>-c:a<span class="w"> </span>aac<span class="w"> </span>-movflags<span class="w"> </span>+faststart<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/hse19.mp4&quot;</span>
-</code></pre></div>
+<p><code>bash
+input_file='/Movies/2025-06-02 11-14-34.mkv'; dir=$(dirname "$input_file"); \
+ffmpeg -ss 00:00:26 -to 01:07:57 -i "$input_file" \
+-filter_complex "[0:a:1]volume=-1,apad[a2inv];[0:a:0][a2inv]amix=inputs=2:duration=first:normalize=0[outa]" \
+-map 0:v -map "[outa]" -c:v copy -c:a aac -movflags +faststart "$dir/hse19.mp4"</code></p>
             
             
           </div>
@@ -155,25 +155,29 @@ ffmpeg<span class="w"> </span>-ss<span class="w"> </span><span class="m">00</spa
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -181,8 +185,6 @@ ffmpeg<span class="w"> </span>-ss<span class="w"> </span><span class="m">00</spa
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

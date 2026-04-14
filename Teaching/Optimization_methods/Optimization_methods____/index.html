@@ -29,7 +29,7 @@
   </script>
   
   
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>">
   
   
   
@@ -59,7 +59,7 @@
     
 
     
-    <li class="header-title-block">🚀 Optimization methods</li>
+    <li class="header-title-block">🛸 Optimization methods</li>
     
   </ul>
 
@@ -82,7 +82,7 @@
   
   
   <div class="icon">
-    🚀
+    🛸
   </div>
   
   
@@ -97,9 +97,9 @@
             
             
             <p class="page-meta">
-              <time class="dt-published" datetime="20 Sep, 2023" itemprop="datePublished">
+              <time class="dt-published" datetime="30 Jan, 2022" itemprop="datePublished">
                 
-                Dates: 01 Sep, 2023 - 31 May, 2024
+                Dates: 01 Sep, 2021 - 31 May, 2022
                 
               </time>
             </p>
@@ -113,7 +113,7 @@
     
     <tr>
         <td width=25%><i class="far fa-calendar-alt"></i> Date</td>
-        <td id="Date"> 01 Sep, 2023 - 31 May, 2024 </td>
+        <td id="Date"> 01 Sep, 2021 - 31 May, 2022 </td>
     </tr>
     
     
@@ -145,7 +145,7 @@
           <div class="page-content">
             
             
-            <p>Сайт с материалами: <a href="http://mipt23.fmin.xyz/">mipt23.fmin.xyz</a>.</p>
+            <p>Сайт с материалами: <a href="http://mipt21.fmin.xyz/">mipt21.fmin.xyz</a>.</p>
             
             
           </div>
@@ -166,25 +166,29 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -192,8 +196,6 @@
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Travel" />
   <meta property="og:image" content=" https://merkulov.top/Travel/DSC05692.jpeg " />
-  <meta property="og:description" content="[🗼 Вышки в Электростали](https://merkulov.top/Travel/Вышки_в_Электростали) [👽 Полудикий Крым](https://merkulov.top/Travel/Полудикий_Крым) [🗻 Montenegr" />
+  <meta property="og:description" content="[⚾ Шар в дубне](https://merkulov.top/Travel/Шар_в_дубне) [🌊 Вперед! К Байкалу! (часть 1)](https://merkulov.top/Travel/Вперед!_К_Байкалу!_(часть_1)) [🛣" />
   <meta property='og:site_name' content="Danya Merkulov" />
   <meta property="og:url" content="https://merkulov.top/Travel" />
   <link rel="stylesheet" href="https://merkulov.top/css/main.css">
@@ -321,25 +321,29 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
+      // Wrap each pre in a .code-wrapper so the button stays fixed
+      // while the code scrolls horizontally
       document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-        // Create button
+        var pre = codeBlock.parentNode;
+
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create button inside wrapper (outside pre)
         var button = document.createElement('button');
         button.className = 'copy-button';
         button.textContent = 'Copy';
-        
-        // Add button to pre element (parent of code block)
-        codeBlock.parentNode.appendChild(button);
-        
+        wrapper.appendChild(button);
+
         // Add click handler
         button.addEventListener('click', function() {
-          // Copy code
           var code = codeBlock.textContent;
           navigator.clipboard.writeText(code).then(function() {
-            // Success feedback
             button.textContent = 'Copied!';
             button.classList.add('success');
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
               button.classList.remove('success');
@@ -347,8 +351,6 @@
           }).catch(function(err) {
             console.error('Failed to copy:', err);
             button.textContent = 'Error';
-            
-            // Reset after 2 seconds
             setTimeout(function() {
               button.textContent = 'Copy';
             }, 2000);

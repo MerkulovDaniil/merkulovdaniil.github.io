@@ -5,11 +5,11 @@ icon: None
 emoji: 🎶
 ---
 
+[💈 Google code styleguides](https://merkulov.top/Other/Notes/Google_code_styleguides)
+
 [📜 Best applied math materials](https://merkulov.top/Other/Notes/Best_applied_math_materials)
 
-[📟 My favourite terminal commands](https://merkulov.top/Other/Notes/My_favourite_terminal_commands)
-
-[💈 Google code styleguides](https://merkulov.top/Other/Notes/Google_code_styleguides)
+[🚴‍♀️ ТО велосипеда checklist](https://merkulov.top/Other/Notes/ТО_велосипеда_checklist)
 
 [🍎 My favourite MacOS utilities](https://merkulov.top/Other/Notes/My_favourite_MacOS_utilities)
 
@@ -17,4 +17,4 @@ emoji: 🎶
 
 [📄 $ \LaTeX $ alternative for simple pdfs](https://merkulov.top/Other/Notes/___LaTeX___alternative_for_simple_pdfs)
 
-[🚴‍♀️ ТО велосипеда checklist](https://merkulov.top/Other/Notes/ТО_велосипеда_checklist)
+[📟 My favourite terminal commands](https://merkulov.top/Other/Notes/My_favourite_terminal_commands)
