@@ -11,8 +11,4 @@ I am Junior Researcher at Skolkovo Institute of Science and Technology and Assis
 
 [👨‍🏫 Teaching](https://merkulov.top/Teaching)
 
-[🏕️ Travel](https://merkulov.top/Travel)
-
-[🤔 Other](https://merkulov.top/Other)
-
 <br/>
