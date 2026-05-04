@@ -2,10 +2,13 @@
 title: Optimization methods
 cover: None
 icon: None
-emoji: 🚀
-Date: 01 Sep, 2023 - 31 May, 2024
-Place: МФТИ
-Role: Senior Lecturer
+emoji: 🚜
+Date: 11 Mar, 2022 - 28 Apr, 2022
+Place: MIPT
+Role: Course author
 ---
 
-Сайт с материалами: [mipt23.fmin.xyz](http://mipt23.fmin.xyz/).
+This is the course for online Master program “Modern state of Artificial Intelligence” at MIPT.
+Materials: [msai22.fmin.xyz](http://msai22.fmin.xyz/)
+
+<br/>
