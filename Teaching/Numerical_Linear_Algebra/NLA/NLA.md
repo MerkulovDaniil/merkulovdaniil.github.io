@@ -2,11 +2,11 @@
 title: NLA
 cover: None
 icon: None
-emoji: 🚆
-Date: 01 Nov, 2018 - 30 Dec, 2018
+emoji: 🚄
+Date: 01 Nov, 2022 - 30 Dec, 2022
 Language: 🇬🇧
 Place: Skoltech
 Role: TA
 ---
 
-Materials [http://nla.skoltech.ru/old/2018/](http://nla.skoltech.ru/old/2018/)
+Materials [https://nla.skoltech.ru/](https://nla.skoltech.ru/)
